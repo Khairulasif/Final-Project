@@ -18,10 +18,7 @@ export class EmpListComponent implements OnInit {
        this.postList = newPost; console.log(this.postList) })
   }
 
-  edit(id:number) {
-
-    
-  }
+  
 
 
   deleteTask(id: number) {

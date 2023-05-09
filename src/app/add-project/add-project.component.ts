@@ -12,7 +12,7 @@ export class AddProjectComponent implements OnInit{
 
 
   form2 !: FormGroup;
-
+  // fromDate: any; toDate: any;
   constructor(public services: AddProjectServiceService, private router: Router){}
 
 
@@ -43,4 +43,6 @@ export class AddProjectComponent implements OnInit{
     })
 
 }
+
+
 }
