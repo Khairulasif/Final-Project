@@ -1,0 +1,74 @@
+/* * {
+	box-sizing: border-box;
+}
+
+input[type=text], input[type=email], input[type=password] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+button[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+button[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.container {
+	border-radius: 2px;
+	background-color: #f2f2f2;
+	padding: 200px;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media screen and (max-width: 600px) {
+	input[type=text], input[type=email], input[type=password] {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	button[type=submit] {
+		width: 100%;
+		float: none;
+	}
+} */
+
+.container {
+	border-radius: 2px;
+	background-color: #c4bfbf;
+	padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 0px;
+
+    margin-top: px;
+}
+
+.form-group {
+    color: rgb(0, 0, 0);
+}
+
+.card-body{
+	color: rgb(0, 0, 0);
+}
+
+.card-footer-manage{
+	padding-left: 20px;
+}
+

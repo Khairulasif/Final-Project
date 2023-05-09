@@ -1,0 +1,18 @@
+
+
+
+
+.content-header{
+    padding-top: 70px;
+  }
+  
+  
+  .card-body{
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    color: black;
+  }
+  

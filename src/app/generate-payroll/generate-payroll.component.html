@@ -1,0 +1,140 @@
+
+
+<div class="content-wrapper">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">Payroll View</h3>
+  
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+           
+            <!-- /.form-group -->
+           
+            <!-- /.form-group -->
+            <div class="form-group">
+                <label for="role">Department :</label>&nbsp;
+                <select name="role" id="role" formControlName = "role">
+                  <option selected >Select Department</option>
+                  <option value="Administration">Administration</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Research">Research</option>
+                  <option value="Sales and Marketing">Sales and Marketing</option>
+                  <option value="Helpdesk">Helpdesk</option>
+                </select>
+              </div>
+  
+            
+  
+            
+  
+            <div class="form-group">
+              <label>Month</label>
+              <input type="month" class="form-control-plaintext" style="background-color: darkgray;">
+            </div>
+  
+  
+          </div>
+  
+  
+          <!-- /.col -->
+  
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+  
+        <div class="card-footer" style="align-self: center;">
+          <div class="flex-parent jc-center">
+            <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+  
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+  
+  
+  
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">List</h3>
+
+              <div class="card-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-default">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Total Satlary</th>
+                    <th>Action</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>183</td>
+                    <td>Asif</td>
+                    <td>$6500</td>
+                    <td><a href="" routerLink="/generateSalary"><span class="badge badge-danger">Generate Salary</span></a></td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <td>183</td>
+                    <td>Selim</td>
+                    <td>$600</td>
+                    <td><a href=""><span class="badge badge-danger">Generate Salary</span></a></td>
+                    
+                  </tr>
+                  <tr>
+                    <td>183</td>
+                    <td>Salam</td>
+                    <td>$2000</td>
+                    <td><a href=""><span class="badge badge-danger">Generate Salary</span></a></td>
+                    
+                  </tr>
+                  <tr>
+                    <td>183</td>
+                    <td>Babul</td>
+                    <td>$1000</td>
+                    <td><a href=""><span class="badge badge-danger">Generate Salary</span></a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+      
+    </div>
+
+    

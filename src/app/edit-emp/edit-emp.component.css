@@ -1,0 +1,23 @@
+
+
+.container {
+	border-radius: 2px;
+	background-color: #c4bfbf;
+	padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 20px;
+
+    margin-top: px;
+}
+
+.form-group {
+    color: black;
+}
+
+.card-body{
+	color: black;
+}
+
+.card-footer-manage{
+	padding-left: 20px;
+}

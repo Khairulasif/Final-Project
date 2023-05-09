@@ -1,0 +1,91 @@
+
+
+<form class="container" [formGroup]= "form2" (ngSubmit)= "update()">
+    
+    <div class="card-body">
+      <h2>Edit Employee</h2>
+      
+      
+      <div class="form-group">
+        <!-- <label for="id">ID</label> -->
+        <input type="number" class="form-control" id="id" hidden formControlName = "id">
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">First Name</label>
+        <input type="text" class="form-control" id="last-name" formControlName = "fname">
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" class="form-control" id="last-name" formControlName = "lname">
+      </div>
+      <div class="form-group">
+        <label for="mobile-no">Mobile No</label>
+        <input type="number" class="form-control" id="mobile-no" formControlName = "mobile">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" formControlName = "email">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender :</label>
+        <input type= "radio" id= "gender" name= "gender" value= "Male" formControlName = "gender">Male
+        <input type= "radio" id= "gender" name= "gender" value= "Female" formControlName = "gender">Female
+      </div>
+      <div class="form-group">
+        <label for="role">Role :</label>
+        <select name="role" id="role" formControlName = "role">
+          <option value="Senior Officer">Senior Officer</option>
+          <option value="Cutting Master">Cutting Master</option>
+          <option value="Worker">Worker</option>
+          <option value="Machine Operator">Machine Operator</option>
+          <option value="Guard">Guard</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nation">Nationality :</label>
+        <select name="nation" id="nation" formControlName = "nationality">
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="India">India</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Srilanka">Srilanka</option>
+          
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nic-no">NIC-No</label>
+        <input type="number" class="form-control" id="nic-no" formControlName = "nic">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" formControlName = "address">
+      </div>
+      <!-- <div class="form-group">
+        <label for="exampleInputFile">Image</label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="exampleInputFile" formControlName = "image">
+            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Upload</span>
+          </div>
+        </div>
+      </div> -->
+      
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+      <div class="flex-parent jc-center">
+        <button type="submit" class="btn btn-primary">Update</button>&nbsp;
+        
+      </div>
+    </div>
+    <br>
+    <!-- <div class="card-footer-manage">
+      <button type= "button" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button>
+    </div> -->
+  </form>
+

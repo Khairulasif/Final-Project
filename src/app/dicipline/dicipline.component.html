@@ -1,0 +1,143 @@
+
+
+
+<div class="content-wrapper">
+  <div class="card card-default">
+    <div class="card-header">
+      <h3 class="card-title">Add Disciplinary</h3>
+
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-tool" data-card-widget="remove">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          
+          <div class="form-group">
+            <form [formGroup]="form2" (ngSubmit)="submit()">
+            
+            <label>Employee ID</label>
+            <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="id">
+          
+          <!-- /.form-group -->
+          
+            <label>Employee Name</label>
+            <input type="text" class="form-control-plaintext" style="background-color: darkgray;" formControlName="name">
+          
+          <!-- /.form-group -->
+          
+            <label>Disciplinary Action</label>
+            <select class="form-control select2bs4" style="width: 100%;" formControlName="action">
+              <option value="Verbal Warning">Verbal Warning</option>
+              <option value="Writing Warning">Writing Warning</option>
+              <option value="Demotion">Demotion</option>
+              <option value="Suspention">Suspention</option>
+
+            </select>
+          
+
+          
+            <label>Type</label>
+            <select class="form-control select2bs4" style="width: 100%;" formControlName="type">
+              <option value="Severe">Severe</option>
+              <option value=" Medium">Medium</option>
+              <option value="Moderate">Moderate</option>
+
+
+            </select>
+          
+
+          
+            <label>Description</label>
+            <textarea name="" id="" cols="30" rows="10" class="form-control-plaintext" style="background-color: darkgrey; color: rgb(0, 0, 0); font: bold;" formControlName="description"></textarea>
+          
+
+            <div class="card-footer" style="align-self: center;">
+              <div class="flex-parent jc-center">
+                <button *ngIf="editData===false" type="submit" class="btn-primary">Submit</button>
+                  <button *ngIf="editData===true" type="submit" class="btn-update">Update</button>
+      
+              </div>
+            </div>
+        </form>
+        </div>
+        </div>
+
+
+        <!-- /.col -->
+
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      
+    </div>
+    <!-- /.card-body -->
+
+
+    
+  </div>
+  <div class="card-body">
+  <div class="card-body table-responsive p-0">
+    <h5>Disciplinary List</h5>
+    <table class="table table-hover text-nowrap">
+      
+      <thead>
+        <tr>
+          <th>Empoyee ID</th>
+          <th>Empoyee Name</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Action</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of list">
+          <td>{{v.id}}</td>
+          <td>{{v.name}}</td>
+          <td>{{v.type}}</td>
+          <td>{{v.description}}</td>
+          <td><span class="badge badge-danger">{{v.action}}</span></td>
+          
+          <td><button type="button" (click)="edit(v)" class="btn-update">Update</button>&nbsp;&nbsp;
+          <button type="button" (click)="delete(v.id)" class="btn-danger">Delete</button></td>
+
+        </tr>
+        <!-- <tr>
+          <td>183</td>
+          <td>Selim</td>
+          <td>Medium</td>
+          <td>jhghjghjgj</td>
+          <td><span class="badge badge-danger">Demotion</span></td>
+          <td><i class="fas fa-edit"></i></td>
+          <td><i class="fas fa-trash-alt"></i></td>
+
+        </tr>
+        <tr>
+          <td>183</td>
+          <td>Ashraf</td>
+          <td>Severe</td>
+          <td>fghdfgdf</td>
+          <td><span class="badge badge-danger">Suspention</span></td>
+          <td><i class="fas fa-edit"></i></td>
+          <td><i class="fas fa-trash-alt"></i></td>
+
+        </tr> -->
+
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  </div>
+
