@@ -22,6 +22,7 @@ export class EditProjectComponent implements OnInit {
     leader:new FormControl(),
     budget:new FormControl(),
     spent:new FormControl(),
+    profit:new FormControl(),
     
     duration:new FormControl(),
     startDate:new FormControl(),
@@ -51,8 +52,9 @@ export class EditProjectComponent implements OnInit {
         company:new FormControl(this.postList.company),
         leader:new FormControl(this.postList.leader),
         budget:new FormControl(this.postList.budget),
-       
         spent:new FormControl(this.postList.spent),
+       
+        profit:new FormControl(this.postList.profit),
         duration:new FormControl(this.postList.duration),
         startDate:new FormControl(this.postList.startDate),
         endDate:new FormControl(this.postList.endDate),

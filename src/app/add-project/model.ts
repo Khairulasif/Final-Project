@@ -8,8 +8,9 @@ export interface modelType{
     budget:number;
     spent:number;
 
-    duration:string;
+    profit:string;
     startDate:Date;
     endDate:Date;
+    duration:number;
     // image:ImageBitmap;
 }

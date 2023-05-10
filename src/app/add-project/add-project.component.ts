@@ -28,9 +28,10 @@ export class AddProjectComponent implements OnInit{
     budget:new FormControl(),
     spent:new FormControl(),
     
-    duration:new FormControl(),
+    profit:new FormControl(),
     startDate:new FormControl(),
     endDate:new FormControl(),
+    duration:new FormControl(),
     
     })
   }

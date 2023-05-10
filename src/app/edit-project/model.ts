@@ -7,6 +7,7 @@ export interface modelType{
     leader:string;
     budget:number;
     spent:number;
+    profit:number;
 
     duration:string;
     startDate:Date;

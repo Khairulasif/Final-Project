@@ -9,6 +9,8 @@ import { modelType } from './model';
 })
 export class EmpListComponent implements OnInit {
 
+
+  searchhr:any;
   postList!: modelType[];
 
   constructor(private services: EmplistServiceService) { }

@@ -42,6 +42,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ViewProjectComponent } from './view-project/view-project.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { ViewProjectComponent } from './view-project/view-project.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
