@@ -39,7 +39,7 @@ export class AddProjectComponent implements OnInit{
     console.log(this.form2.value);
     this.services.addTask(this.form2.value).subscribe((res:any) => {
       console.log('Post created successfully');
-      // this.router.navigateByUrl('employeeList');
+      this.router.navigateByUrl('projectList');
     })
 
 }

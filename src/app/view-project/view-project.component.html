@@ -196,92 +196,60 @@
           <div class="row">
             <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
               <div class="row">
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Estimated budget</span>
-                      <span class="info-box-number text-center text-muted mb-0">2300</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Total amount spent</span>
-                      <span class="info-box-number text-center text-muted mb-0">2000</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
+                
+                
+                <!-- <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Estimated project duration</span>
                       <span class="info-box-number text-center text-muted mb-0">20</span>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="row">
+                </div> -->
                 <div class="col-12">
-                  <h4>Recent Activity</h4>
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 7:45 PM today</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
+                
 
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
-                      </p>
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                        <span class="username">
-                          <a href="#">Sarah Ross</a>
-                        </span>
-                        <span class="description">Sent you a message - 3 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                      </p>
-                    </div>
-
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 5 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-                      </p>
-                    </div>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tr>
+                        <th style="width:50%">Project ID :</th>
+                        <td>{{postList.id}}</td>
+                      </tr>
+                      <tr>
+                        <th>Start Date :</th>
+                        <td>$10.34</td>
+                      </tr>
+                      <tr>
+                        <th>End Date :</th>
+                        <td>$5.80</td>
+                      </tr>
+                      <tr>
+                        <th>Project Duration :</th>
+                        <td>{{postList.duration}}</td>
+                      </tr>
+                      <tr>
+                        <th>Remaining Days :</th>
+                        <td>$265.24</td>
+                      </tr>
+                      <tr>
+                          <th>Estimated Budget :</th>
+                          <td>{{postList.budget}}</td>
+                        </tr>
+                        <tr>
+                          <th>Total Amount Spent :</th>
+                          <td>208</td>
+                        </tr>
+                        
+                        <tr>
+                          <th>Amount Remaining :</th>
+                          <td>$265.24</td>
+                        </tr>
+                        <tr>
+                          <th>Status :</th>
+                          <td>$265.24</td>
+                        </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,6 +290,7 @@
               </div>
             </div>
           </div>
+          
         </div>
         <!-- /.card-body -->
       </div>

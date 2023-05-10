@@ -74,7 +74,7 @@ const routes: Routes = [
   {path: 'projectList', component: ProjectListComponent },
   {path: 'addProject', component: AddProjectComponent },
   {path: 'editProject/:postIds/edit', component: EditProjectComponent },
-  {path: 'viewProject', component: ViewProjectComponent },
+  {path: 'viewProject/:postId/view', component: ViewProjectComponent },
 
   // {path: "**" , component: DashboardComponent}
 
