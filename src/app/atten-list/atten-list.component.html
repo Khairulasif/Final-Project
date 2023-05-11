@@ -82,60 +82,41 @@
               <th>Sign In</th>
               <th>Sign Out</th>
               <th>Working Hour</th>
+              <th>Status</th>
               <th>Action</th>
 
 
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>183</td>
-              <td>Asif</td>
-              <td>12/04/23</td>
-              <td>03:00:00</td>
-              <td>07:00:00</td>
-              <td>4.00</td>
+            <tr *ngFor="let v of postList">
+              <td>{{v.id}}</td>
+              <td>{{v.name}}</td>
+              <td>{{v.date}}</td>
+              <td>{{v.signIn}}</td>
+              <td>{{v.signOut}}</td>
+              <td>{{v.status}}</td>
 
-              <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-              <td><i class="fas fa-trash-alt"></i></td>
+              <td><button type="button" [routerLink]="['/attendanceList/', v.id, 'view']"
+                class="btn btn-primary"><i class="fas fa-folder">
+                </i>Generate Report
+            </button> &nbsp;
+            <!-- <button type="button" [routerLink]="['/editProject/', v.id, 'edit']"
+                class="btn btn-default"><i class="fas fa-pencil-alt">Edit
+                </i></button> &nbsp; -->
 
-            </tr>
-            <tr>
-              <td>183</td>
-              <td>Bahadur</td>
-              <td>12/04/23</td>
-              <td>03:00:00</td>
-              <td>07:00:00</td>
-              <td>4.00</td>
+            <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger"><i
+                    class="fas fa-trash">
+                    Delete</i></button>
+        </td>
 
-              <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-              <td><i class="fas fa-trash-alt"></i></td>
-
-            </tr>
-            <tr>
-              <td>183</td>
-              <td>Selim</td>
-              <td>12/04/23</td>
-              <td>03:00:00</td>
-              <td>07:00:00</td>
-              <td>4.00</td>
-
-              <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-              <td><i class="fas fa-trash-alt"></i></td>
+              <!-- <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
+              <td><i class="fas fa-trash-alt"></i></td> -->
 
             </tr>
-            <tr>
-              <td>183</td>
-              <td>Ashraf</td>
-              <td>12/04/23</td>
-              <td>03:00:00</td>
-              <td>07:00:00</td>
-              <td>4.00</td>
-
-              <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-              <td><i class="fas fa-trash-alt"></i></td>
-
-            </tr>
+           
+            
+            
           </tbody>
         </table>
       </div>

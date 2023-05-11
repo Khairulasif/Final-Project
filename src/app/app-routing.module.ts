@@ -56,7 +56,7 @@ const routes: Routes = [
   {path: 'discipline', component: DiciplineComponent },
   {path: 'attenList', component: AttenListComponent },
   {path: 'addAtten', component: AttenReportComponent },
-  {path: 'attenReport', component: AttenReport2Component },
+  {path: 'attendanceList/:postIds/view', component: AttenReport2Component },
   {path: 'holidayList', component: HolidayComponent },
   {path: 'addHoliday', component: AddHolidayComponent },
   {path: 'leaveAppli', component: LeaveApplComponent },

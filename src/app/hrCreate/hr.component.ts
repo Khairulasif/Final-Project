@@ -11,7 +11,7 @@ import { EmpServiceService } from './emp-service.service';
 })
 export class HrComponent implements OnInit {
 
-  searchhr: any;
+  
   form2 !: FormGroup;
 
   constructor(public services: EmpServiceService, private router: Router){}
