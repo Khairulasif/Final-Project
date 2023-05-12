@@ -77,53 +77,21 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Victory Day</td>
+              <tr *ngFor="let v of postList">
+                <td>{{v.name}}</td>
 
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>2</td>
-
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-
-              </tr>
-              <tr>
-                <td>Christmas</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>2</td>
+                <td>{{v.startDate}}</td>
+                <td>{{v.endDate}}</td>
+                <td>{{v.days}}</td>
 
 
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
+
+                  <td><button (click)="deleteTask(v.id)"><i class="fas fa-trash-alt"></i></button></td>
 
               </tr>
-              <tr>
-                <td>Eid</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>5</td>
-
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-
-              </tr>
-              <tr>
-                <td>Durga Puja</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>3</td>
-
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-              </tr>
+             
+             
+              
             </tbody>
           </table>
         </div>

@@ -1,7 +1,3 @@
-
-
-
-
 <div class="content-wrapper">
   <div class="card card-default">
     <div class="card-header">
@@ -18,24 +14,31 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
+      <form [formGroup]="form2" (ngSubmit)="submit()">
       <div class="row">
         <div class="col-md-12">
 
           <!-- /.form-group -->
-          <div class="form-group">
-            <label>Name Of Holiday</label>
-            <input type="text" class="form-control-plaintext" style="background-color: darkgray;">
-          </div>
-          <!-- /.form-group -->
-          <div class="form-group">
-            <label>Start Date</label>
-            <input type="date" class="form-control-plaintext" style="background-color: darkgray;">
-          </div>
+          
+          <input type="text" class="form-control-plaintext" hidden style="background-color: darkgray;">
 
-          <div class="form-group">
-            <label>End Date</label>
-            <input type="time" class="form-control-plaintext" style="background-color: darkgray;">
-          </div>
+          <label>Name Of Holiday</label>
+          <input type="text" class="form-control-plaintext" style="background-color: darkgray;" formControlName="name">
+
+          <!-- /.form-group -->
+
+          <label>Start Date</label>
+          <input type="date" class="form-control-plaintext" style="background-color: darkgray;" formControlName="startDate">
+
+
+
+          <label>End Date</label>
+          <input type="date" class="form-control-plaintext" style="background-color: darkgray;" formControlName="endDate">
+
+
+          <label>Days</label>
+          <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="days">
+
 
 
 
@@ -50,12 +53,18 @@
       <!-- /.row -->
 
       <div class="card-footer" style="align-self: center;">
-        <div class="flex-parent jc-center">
+        <!-- <div class="flex-parent jc-center">
           <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+
+        </div> -->
+
+        <div class="flex-parent jc-center">
+          <button *ngIf="editData===false" type="submit" class="btn-primary">Submit</button>
+            <button *ngIf="editData===true" type="submit" class="btn-update">Update</button>
 
         </div>
       </div>
-      
+    </form>
     </div>
     <!-- /.card-body -->
 
@@ -100,53 +109,25 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Victory Day</td>
+              <tr *ngFor="let v of postList">
+                <td>{{v.name}}</td>
 
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>2</td>
+                <td>{{v.startDate}}</td>
+                <td>{{v.endDate}}</td>
+                <td>{{v.days}}</td>
 
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-
-              </tr>
-              <tr>
-                <td>Christmas</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>2</td>
+                <td><button type="button" (click)="edit(v)" class="btn-update"><i class="fas fa-edit">Edit</i></button>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteTask(v.id)" class="btn-danger"><i class="fas fa-trash-alt">Delete</i></button></td>
 
 
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
+                <!-- <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
+                  <i class="fas fa-trash-alt"></i>
+                </td> -->
 
               </tr>
-              <tr>
-                <td>Eid</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>5</td>
-
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-
-              </tr>
-              <tr>
-                <td>Durga Puja</td>
-
-                <td>12/04/23</td>
-                <td>12/04/23</td>
-                <td>3</td>
-
-
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i>&nbsp;&nbsp;
-                  <i class="fas fa-trash-alt"></i></td>
-              </tr>
+              
+              
+             
             </tbody>
           </table>
         </div>

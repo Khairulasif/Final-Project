@@ -2,18 +2,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { modelType } from './model';
-
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
 }
-
 @Injectable({
   providedIn: 'root'
 })
-export class AttenListServiceService {
+export class AddHolidayServiceService {
 
   private url = 'http://localhost:8080/api';
 
@@ -21,12 +18,12 @@ export class AttenListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/attendancelistget');
+    const task = this.httpService.get<modelType[]>(this.url + '/holidaylistget');
     return task;
   }
 
   addTask(task:modelType) {
-    return this.httpService.post<modelType>(this.url + '/emppost' , task, httpOptions);
+    return this.httpService.post<modelType>(this.url + '/holidayaddpost' , task, httpOptions);
   }
 
   updateTask(task:modelType) {
@@ -36,6 +33,6 @@ export class AttenListServiceService {
 
   deleteTask(id:number) {
 
-    return this.httpService.delete(this.url + '/attenlistdelete/'+ id)
+    return this.httpService.delete(this.url + '/holidaylistdelete/'+ id)
   }
 }

@@ -83,66 +83,24 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>123</td>
+                <tr *ngFor="let v of postList">
+                  <td>{{v.id}}</td>
   
-                  <td>Asif</td>
-                  <td>Casual</td>
-                  <td>02/04/23</td>
-                  <td>02/04/23</td>
-                  <td>02/04/23</td>
-                  <td>Approved</td>
+                  <td>{{v.name}}</td>
+                  <td>{{v.type}}</td>
+                  <td>{{v.applyDate}}</td>
+                  <td>{{v.startDate}}</td>
+                  <td>{{v.endDate}}</td>
+                  <td>{{v.status}}</td>
   
   
                  <td><a href=""><span class="badge badge">Approve</span></a>&nbsp;&nbsp;
                  <a href=""><span class="badge badge-danger">Reject</span></a></td>
   
                 </tr>
-                <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>Casual</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>Approved</td>
-    
-    
-                   <td><a href=""><span class="badge badge">Approve</span></a>&nbsp;&nbsp;
-                   <a href=""><span class="badge badge-danger">Reject</span></a></td>
-    
-                  </tr>
-                  <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>Casual</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>Approved</td>
-    
-    
-                   <td><a href=""><span class="badge badge">Approve</span></a>&nbsp;&nbsp;
-                   <a href=""><span class="badge badge-danger">Reject</span></a></td>
-    
-                  </tr>
-                  <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>Casual</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>02/04/23</td>
-                    <td>Approved</td>
-    
-    
-                   <td><a href=""><span class="badge badge">Approve</span></a>&nbsp;&nbsp;
-                   <a href=""><span class="badge badge-danger">Reject</span></a></td>
-    
-                  </tr>
+                
+                  
+                  
               </tbody>
             </table>
           </div>

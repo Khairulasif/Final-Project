@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { modelType } from './model';
+import { Observable } from 'rxjs';
 
 
 const httpOptions = {
@@ -9,11 +9,10 @@ const httpOptions = {
     'Content-Type': 'application/json'
   })
 }
-
 @Injectable({
   providedIn: 'root'
 })
-export class AttenListServiceService {
+export class LeaveAppServiceService {
 
   private url = 'http://localhost:8080/api';
 
@@ -21,7 +20,7 @@ export class AttenListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/attendancelistget');
+    const task = this.httpService.get<modelType[]>(this.url + '/leaveapplylistget');
     return task;
   }
 
@@ -36,6 +35,6 @@ export class AttenListServiceService {
 
   deleteTask(id:number) {
 
-    return this.httpService.delete(this.url + '/attenlistdelete/'+ id)
+    return this.httpService.delete(this.url + '/holidaylistdelete/'+ id)
   }
 }
