@@ -1,7 +1,7 @@
 .card {
 	border-radius: 2px;
 	background-color: #ffffff;
-	padding-top: 80px;
+	padding-top: 40px;
     padding-left: 50px;
     padding-right: 0px;
 
@@ -19,3 +19,8 @@
 .card-footer-manage{
 	padding-left: 20px;
 }
+
+/* .card-card-secondary{
+
+	padding-top: 2px;
+} */
