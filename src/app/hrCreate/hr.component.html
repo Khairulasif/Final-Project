@@ -6,15 +6,17 @@
 
       <div class="card-header p-2">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Basic Information</a></li>
-          <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Bank Account Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" >Basic Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/employeeEducationForm">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/bankAccInformation">Bank Account Information</a></li>
         </ul>
       </div>
 
-<form [formGroup]= "form2" (ngSubmit)= "submit()">
+
 
     <div class="card-body">
+      
+        <form [formGroup]= "form2" (ngSubmit)= "submit()">
       <h2>Add Employee</h2>
 
       <input type="number" hidden id="id" formControlName ="id">
@@ -91,7 +93,7 @@
         </div>
       </div> -->
 
-    </div>
+    
     <!-- /.card-body -->
 
 
@@ -109,7 +111,16 @@
       </div>
     </div>
   </form>
+
+  
+  </div>
+  </div>
+
   
 </div>
+
+
 </div>
-</div>
+
+
+

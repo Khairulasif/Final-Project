@@ -1,0 +1,21 @@
+.card {
+	border-radius: 2px;
+	background-color: #ffffff;
+	padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 0px;
+
+    margin-top: px;
+}
+
+.form-group {
+    color: rgb(255, 255, 255);
+}
+
+.card-body{
+	color: rgb(255, 255, 255);
+}
+
+.card-footer-manage{
+	padding-left: 20px;
+}

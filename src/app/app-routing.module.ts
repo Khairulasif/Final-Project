@@ -34,6 +34,8 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ViewProjectComponent } from './view-project/view-project.component';
+import { EducationComponent } from './education/education.component';
+import { BankAccountComponent } from './bank-account/bank-account.component';
 
 // import { LoginComponent } from './login/login.component';
 
@@ -75,6 +77,8 @@ const routes: Routes = [
   {path: 'addProject', component: AddProjectComponent },
   {path: 'editProject/:postIds/edit', component: EditProjectComponent },
   {path: 'viewProject/:postId/view', component: ViewProjectComponent },
+  {path: 'employeeEducationForm', component: EducationComponent },
+  {path: 'bankAccInformation', component: BankAccountComponent },
 
   // {path: "**" , component: DashboardComponent}
 

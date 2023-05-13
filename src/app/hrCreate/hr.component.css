@@ -72,3 +72,12 @@ button[type=submit]:hover {
 	padding-left: 20px;
 }
 
+.nav-item > :active {
+
+	color: aqua;
+}
+	
+
+
+
+

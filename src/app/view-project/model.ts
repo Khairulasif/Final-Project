@@ -3,8 +3,8 @@ export interface modelType {
     name: string;
     company: string;
     leader: string;
-    // startDate: Date;
-    // endDate: Date;
+    startDate: Date;
+    endDate: Date;
     status: string;
     budget: number
     spent: number
