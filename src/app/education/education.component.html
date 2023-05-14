@@ -1,26 +1,28 @@
-
 <div class="content-wrapper">
-  
-    <div class="card card-default">
-      <div class="card">
-  
-        <div class="card-header p-2">
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/createEmp">Basic Information</a></li>
-            <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/employeeEducationForm">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/bankAccInformation">Bank Account Information</a></li>
-          </ul>
-        </div>
-  
-  
-  
+
+  <div class="card card-default">
+    <div class="card">
+
+      <div class="card-header p-2">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/createEmp">Basic
+              Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab"
+              routerLink="/employeeEducationForm">Academic Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/bankAccInformation">Bank
+              Account Information</a></li>
+        </ul>
+      </div>
+
+
+
       <div class="card-body">
-        
-          <!-- <form [formGroup]= "form2" (ngSubmit)= "submit()"> -->
+
+        <!-- <form [formGroup]= "form2" (ngSubmit)= "submit()"> -->
         <h2>Add Academic Information</h2>
-  
+
         <div class="row">
-          
+
           <div class="col-md-6">
             <div class="card card-secondary">
               <div class="card-header">
@@ -41,7 +43,7 @@
                   <option value="MSc(Pass)">MSc(Pass)</option>
                   <option value="MBA">MBA</option>
                   <option value="Kamil">Kamil</option>
-    
+
                 </select>
 
                 <!-- <label for="inputEstimatedBudget">Level Of Education</label>
@@ -61,8 +63,8 @@
                 <input type="text" id="major" class="form-control" formControlName="spent">
 
 
-                <label for="inputEstimatedDuration">Estimated Profit</label>
-                <input type="number" id="inputEstimatedDuration" class="form-control" formControlName="profit">
+                <label for="year">Passing Year</label>
+                <input type="number" id="year" class="form-control" formControlName="profit">
 
 
 
@@ -73,7 +75,7 @@
 
             <div class="card card-secondary">
               <div class="card-header">
-                <h3 class="card-title">Date</h3>
+                <h3 class="card-title">Graduation</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -83,14 +85,56 @@
               </div>
               <div class="card-body">
 
-                <label for="inputEstimatedBudget">Project Start Date</label>
-                <input type="date" id="inputEstimatedBudget" class="form-control" formControlName="startDate">
+                <label for="education">Level Of Education</label>
+                <select class="form-control select2bs4" style="width: 100%;" formControlName="action">
+                  <option value="BA(Pass)">BA(Pass)</option>
+                  <option value="BA(Hons)">BA(Hons)</option>
+                  <option value="BSc(Pass)">BSc(Pass)</option>
+                  <option value="BBA">BBA</option>
+
+                </select>
 
 
-                <label for="inputSpentBudget">Project End Date</label>
-                <input type="date" id="inputSpentBudget" class="form-control" formControlName="endDate">
+                <label for="inputSpentBudget">Institute Name</label>
+                <input type="text" id="inputSpentBudget" class="form-control" formControlName="endDate">
 
-                <label for="inputSpentBudget">Duration of Project</label>
+                <label for="inputSpentBudget">Major</label>
+                <input type="text" id="inputSpentBudget" class="form-control" formControlName="duration">
+
+
+                <label for="inputSpentBudget">Passing Year</label>
+                <input type="text" id="fromDate" name="toDate"  class="form-control" formControlName="endDate" >
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">HSC</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <label for="inputEstimatedBudget">Group</label>
+                <select class="form-control select2bs4" style="width: 100%;" formControlName="action">
+                  <option value="Arts">Arts</option>
+                  <option value="Science">Science</option>
+                  <option value="Commerce">Commerce</option>
+                  
+
+                </select>
+
+
+                <label for="inputSpentBudget">Institute Name</label>
+                <input type="text" id="inputSpentBudget" class="form-control" formControlName="endDate">
+
+                <label for="inputSpentBudget">Passing Year</label>
                 <input type="number" id="inputSpentBudget" class="form-control" formControlName="duration">
 
 
@@ -103,7 +147,7 @@
 
             <div class="card card-secondary">
               <div class="card-header">
-                <h3 class="card-title">Date</h3>
+                <h3 class="card-title">SSC</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -113,14 +157,20 @@
               </div>
               <div class="card-body">
 
-                <label for="inputEstimatedBudget">Project Start Date</label>
-                <input type="date" id="inputEstimatedBudget" class="form-control" formControlName="startDate">
+                <label for="inputEstimatedBudget">Group</label>
+                <select class="form-control select2bs4" style="width: 100%;" formControlName="action">
+                  <option value="Arts">Arts</option>
+                  <option value="Science">Science</option>
+                  <option value="Commerce">Commerce</option>
+                  
+
+                </select>
 
 
-                <label for="inputSpentBudget">Project End Date</label>
-                <input type="date" id="inputSpentBudget" class="form-control" formControlName="endDate">
+                <label for="inputSpentBudget">Institute Name</label>
+                <input type="text" id="inputSpentBudget" class="form-control" formControlName="endDate">
 
-                <label for="inputSpentBudget">Duration of Project</label>
+                <label for="inputSpentBudget">Passing Year</label>
                 <input type="number" id="inputSpentBudget" class="form-control" formControlName="duration">
 
 
@@ -136,28 +186,27 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                       src="../../dist/img/user4-128x128.jpg"
-                       alt="User profile picture">
+                  <img class="profile-user-img img-fluid img-circle" src="../../dist/img/user4-128x128.jpg"
+                    alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <h3 class="profile-username text-center">Altaf Mahmud</h3>
 
-                <p class="text-muted text-center">Software Engineer</p>
+                <!-- <p class="text-muted text-center">Software Engineer</p> -->
 
-                <ul class="list-group list-group-unbordered mb-3">
+                <ul class="list-group">
                   <li class="list-group-item">
-                    <b>Followers</b> <a class="float-right">1,322</a>
+                    <b>Email:</b> <p>altaf@gmail.com</p>
                   </li>
                   <li class="list-group-item">
-                    <b>Following</b> <a class="float-right">543</a>
+                    <b>Contact No:</b> <p>019999999</p>
                   </li>
                   <li class="list-group-item">
-                    <b>Friends</b> <a class="float-right">13,287</a>
+                    <b>Address:</b> <p>Dhaka</p>
                   </li>
                 </ul>
 
-                <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
               </div>
               <!-- /.card-body -->
             </div>
@@ -168,16 +217,16 @@
           <!-- /.card -->
 
         </div>
-        
-       
-            
-        
-        
-  
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
         <!-- <div class="form-group">
           <label for="exampleInputFile">Image</label>
           <div class="input-group">
@@ -190,36 +239,32 @@
             </div>
           </div>
         </div> -->
-  
-      
-      <!-- /.card-body -->
-  
-  
-  
-  
-      <br>
-      <!-- <div class="card-footer-manage">
+
+
+        <!-- /.card-body -->
+
+
+
+
+        <br>
+        <!-- <div class="card-footer-manage">
         <button type= "button" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button>
       </div> -->
-  
-      <div class="card-footer" style="align-self: center;">
-        <div class="flex-parent jc-center">
-          <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
-          <!-- <button type= "submit" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button> -->
+
+        <div class="card-footer" style="align-self: center;">
+          <div class="flex-parent jc-center">
+            <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+            <!-- <button type= "submit" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button> -->
+          </div>
         </div>
+        <!-- </form> -->
+
+
       </div>
-    <!-- </form> -->
-  
-    
     </div>
-    </div>
-  
-    
+
+
   </div>
-  
-  
-  </div>
-  
-  
-  
-  
+
+
+</div>

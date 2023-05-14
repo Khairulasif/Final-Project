@@ -1,87 +1,138 @@
-
 <div class="content-wrapper">
-  
+
   <div class="card card-default">
     <div class="card">
 
       <div class="card-header p-2">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab" >Basic Information</a></li>
-          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/employeeEducationForm">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/bankAccInformation">Bank Account Information</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Basic Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab"
+              routerLink="/employeeEducationForm">Academic Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/bankAccInformation">Bank
+              Account Information</a></li>
         </ul>
       </div>
 
 
 
-    <div class="card-body">
-      <div class="tab-content">
-        <div class="active tab-pane" id="activity">
-        <form [formGroup]= "form2" (ngSubmit)= "submit()">
-      <h2>Add Employee</h2>
+      <div class="card-body">
+        <div class="tab-content">
+          <div class="active tab-pane" id="activity">
+            <form [formGroup]="form2" (ngSubmit)="submit()">
+              <h2>Add Employee</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="number" hidden id="id" formControlName="id">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" id="first-name" formControlName="fname">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" formControlName="lname">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="mobile-no">Mobile No</label>
+                    <input type="number" class="form-control" id="mobile-no" formControlName="mobile">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+                      formControlName="email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nation">Nationality :</label>&nbsp;
+                    <select name="nation" id="nation" formControlName="nationality">
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="India">India</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Srilanka">Srilanka</option>
+    
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="department">Department :</label>&nbsp;
+                    <select name="department" id="department" formControlName="department">
+                      <option value="Administration">Administration</option>
+                      <option value="Customer Support">Customer Support</option>
+                      <option value="Research">Research</option>
+                      <option value="Finance">Finance</option>
 
-      <input type="number" hidden id="id" formControlName ="id">
-      <div class="form-group">
-        <label for="first-name">First Name</label>
-        <input type="text" class="form-control" id="first-name" formControlName = "fname">
-      </div>
-      <div class="form-group">
-        <label for="last-name">Last Name</label>
-        <input type="text" class="form-control" id="last-name" formControlName = "lname">
-      </div>
-      <div class="form-group">
-        <label for="mobile-no">Mobile No</label>
-        <input type="number" class="form-control" id="mobile-no" formControlName = "mobile">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" formControlName = "email">
-      </div>
-      <div class="form-group">
-        <label for="gender">Gender :</label>&nbsp;
-        <input type= "radio" id= "gender" name= "gender" value= "Male" formControlName = "gender">Male
-        <input type= "radio" id= "gender" name= "gender" value= "Female" formControlName = "gender">Female
-      </div>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="gender">Gender :</label>&nbsp;
+                    <input type="radio" id="gender" name="gender" value="Male" formControlName="gender">Male
+                    <input type="radio" id="gender" name="gender" value="Female" formControlName="gender">Female
+                  </div>
+                </div>
+                <div class="col-md-6">
+              <div class="form-group">
+                <label for="designation">Designation :</label>&nbsp;
+                <select name="designation" id="designation" formControlName="designation">
+                  <option value="Senior Officer">Senior Officer</option>
+                  <option value="Vice Chairmen">Vice Chairmen</option>
+                  <option value="Chief Executive Officer">Chief Executive Officer</option>
+                  <option value="Manager">Manager</option>
+                  <option value="Guard">Guard</option>
+                </select>
+              </div>
+            </div>
+            
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nic-no">Date of Birth</label>
+                  <input type="date" class="form-control" id="nic-no" formControlName="nic">
+                </div>
+              </div>
+              <div class="col-md-6">
+              <div class="form-group">
+                <label for="nic-no">NIC-No</label>
+                <input type="number" class="form-control" id="nic-no" formControlName="nic">
+              </div>
+            </div>
+            </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" formControlName="address">
+              </div>
 
-      <div class="form-group">
-        <label for="department">Department :</label>&nbsp;
-        <select name="department" id="department" formControlName = "department">
-          <option value="Administration">Administration</option>
-          <option value="Customer Support">Customer Support</option>
-          <option value="Research">Research</option>
-          <option value="Finance">Finance</option>
-
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="designation">Designation :</label>&nbsp;
-        <select name="designation" id="designation" formControlName = "designation">
-          <option value="Senior Officer">Senior Officer</option>
-          <option value="Vice Chairmen">Vice Chairmen</option>
-          <option value="Chief Executive Officer">Chief Executive Officer</option>
-          <option value="Manager">Manager</option>
-          <option value="Guard">Guard</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="nation">Nationality :</label>&nbsp;
-        <select name="nation" id="nation" formControlName = "nationality">
-          <option value="Bangladesh">Bangladesh</option>
-          <option value="India">India</option>
-          <option value="Pakistan">Pakistan</option>
-          <option value="Srilanka">Srilanka</option>
-
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="nic-no">NIC-No</label>
-        <input type="number" class="form-control" id="nic-no" formControlName = "nic">
-      </div>
-      <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" class="form-control" id="address" formControlName = "address">
-      </div>
-      <!-- <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nic-no">Date of Joining</label>
+                    <input type="date" class="form-control" id="nic-no" formControlName="nic">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nic-no">Basic Salary</label>
+                    <input type="number" class="form-control" id="nic-no" formControlName="nic">
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="form-group">
         <label for="exampleInputFile">Image</label>
         <div class="input-group">
           <div class="custom-file">
@@ -93,37 +144,43 @@
           </div>
         </div>
       </div> -->
+      <!-- <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method :</label>&nbsp;
+            <input type="radio" id="paymentMethod" name="paymentMethod" value="Male" formControlName="gender">Male
+            <input type="radio" id="paymentMethod" name="paymentMethod" value="Female" formControlName="gender">Female
+          </div>
+        </div>
+      </div> -->
 
-    
-    <!-- /.card-body -->
+
+              <!-- /.card-body -->
 
 
 
 
-    <br>
-    <!-- <div class="card-footer-manage">
+              <br>
+              <!-- <div class="card-footer-manage">
       <button type= "button" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button>
     </div> -->
 
-    <div class="card-footer" style="align-self: center;">
-      <div class="flex-parent jc-center">
-        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
-        <!-- <button type= "submit" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button> -->
+              <div class="card-footer" style="align-self: center;">
+                <div class="flex-parent jc-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+                  <!-- <button type= "submit" class= "btn btn-primary" routerLink= "manageEmp">Manage Employee</button> -->
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
       </div>
     </div>
-  </form>
-  </div>
 
-  
-  </div>
-</div>
-  </div>
 
-  
-</div>
+  </div>
 
 
 </div>
-
-
-

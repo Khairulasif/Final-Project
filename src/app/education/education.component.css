@@ -2,7 +2,7 @@
 	border-radius: 2px;
 	background-color: #ffffff;
 	padding-top: 40px;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 0px;
 
     margin-top: px;
@@ -19,8 +19,3 @@
 .card-footer-manage{
 	padding-left: 20px;
 }
-
-/* .card-card-secondary{
-
-	padding-top: 2px;
-} */
