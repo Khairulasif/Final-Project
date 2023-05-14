@@ -12,7 +12,7 @@
           </ul>
         </div>
   
-  
+        <form [formGroup]="form2" (ngSubmit)="submit()">
   
       <div class="card-body">
         
@@ -22,21 +22,29 @@
         <input type="number" hidden id="id" formControlName ="id">
         <div class="form-group">
           <label for="first-name">Bank Name</label>
-          <input type="text" class="form-control" id="first-name" formControlName = "fname">
+          <input type="text" class="form-control" id="first-name" formControlName = "bankName">
         </div>
         <div class="form-group">
           <label for="last-name">Account Name</label>
-          <input type="text" class="form-control" id="last-name" formControlName = "lname">
+          <input type="text" class="form-control" id="last-name" formControlName = "accountName">
         </div>
         <div class="form-group">
           <label for="mobile-no">Account No</label>
-          <input type="text" class="form-control" id="mobile-no" formControlName = "mobile">
+          <input type="text" class="form-control" id="mobile-no" formControlName = "accountNo">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Branch</label>
-          <input type="text" class="form-control" id="exampleInputEmail1"  formControlName = "email">
+          <input type="text" class="form-control" id="exampleInputEmail1"  formControlName = "branch">
         </div>
-        
+        <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method</label><br>
+            <input type="radio" id="paymentMethod" name="paymentMethod" value="Check" formControlName="method"> Check
+            <input type="radio" id="paymentMethod" name="paymentMethod" value="Bank Transfer" formControlName="method"> Bank Transfer
+          </div>
+        </div>
+      </div>
   
         <!-- <div class="form-group">
           <label for="department">Department :</label>&nbsp;
@@ -71,6 +79,7 @@
   
     
     </div>
+  </form>
     </div>
   
     

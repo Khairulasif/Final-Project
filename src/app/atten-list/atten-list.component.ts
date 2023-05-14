@@ -9,6 +9,8 @@ import { AttenListServiceService } from './atten-list-service.service';
 })
 export class AttenListComponent implements OnInit{
 
+  searchDepartment: any;
+  searchhr: any;
   postList!: modelType[];
 
   constructor(private services: AttenListServiceService) { }

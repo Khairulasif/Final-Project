@@ -32,6 +32,9 @@ export class HrComponent implements OnInit {
     nationality:new FormControl(),
     nic:new FormControl(),
     address:new FormControl(),
+    dateOfBirth:new FormControl(),
+    joiningDate:new FormControl(),
+    basicSalary:new FormControl(),
     // image:new FormControl(),
     })
   }

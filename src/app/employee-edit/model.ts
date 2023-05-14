@@ -11,6 +11,9 @@ export interface modelType{
     nationality:string;
     nic:number;
     address:string;
+    dateOfBirth:Date;
+    joiningDate:Date;
+    basicSalary:number;
     // image:ImageBitmap;
   }
   
