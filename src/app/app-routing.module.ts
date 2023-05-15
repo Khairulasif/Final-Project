@@ -42,7 +42,7 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
 const routes: Routes = [
   // {path: "" , component: DashboardComponent},
   // {path: "login" , component: DashboardComponent},
-  // {path: "" , component: DashboardComponent},
+  {path: "" , component: DashboardComponent},
   {path: "dashboard" , component: DashboardComponent},
 
   {path: "createEmp" , component: HrComponent},
@@ -80,7 +80,7 @@ const routes: Routes = [
   {path: 'employeeEducationForm', component: EducationComponent },
   {path: 'bankAccInformation', component: BankAccountComponent },
 
-  // {path: "**" , component: DashboardComponent}
+  {path: "**" , component: DashboardComponent}
 
 ];
 
