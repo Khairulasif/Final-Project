@@ -21,7 +21,7 @@ export class AttenListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/attendancelistget');
+    const task = this.httpService.get<modelType[]>(this.url + '/addattenlistget');
     return task;
   }
 
@@ -38,4 +38,12 @@ export class AttenListServiceService {
 
     return this.httpService.delete(this.url + '/attenlistdelete/'+ id)
   }
+
+  getByDepartment(department:String) {
+    return this.httpService.get<modelType[]>(this.url + '' + department)
+  }
+
+  // find(id:number) : Observable<any>{
+  //   return this.httpService.get(this.url + '/departmentget/' + id)
+  // }
 }

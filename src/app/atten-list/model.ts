@@ -9,6 +9,8 @@ export interface modelType{
     signOut:Time;
     workingHour:Time;
     status:string;
+    department:string;
+    designation:string;
     
   }
   
