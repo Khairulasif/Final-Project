@@ -1,60 +1,139 @@
-
 <div class="content-wrapper">
-    <div class="card card-default">
-        <div class="card-header">
-            <h3 class="card-title">Create Admin</h3>
+  <div class="card card-default">
+    <div class="card-header">
+      <h3 class="card-title">Create Admin</h3>
 
 
+    </div>
+
+
+    
+      <form class="form-horizontal">
+
+        <form [formGroup]="form2" (ngSubmit)="submit()">
+
+
+        <div class="card-body">
+
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Name" hidden formControlName="id">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email" formControlName="email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="user" class="col-sm-2 col-form-label">User Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="user" placeholder="User Name" formControlName="userName">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password"
+                formControlName="password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="retypePassword" class="col-sm-2 col-form-label">Retype Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="retypePassword" placeholder="Retype Password"
+                formControlName="retypePassword">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                <label class="form-check-label" for="exampleCheck2">Remember me</label>
+              </div>
+            </div>
+          </div>
         </div>
-       
-        
-        <form class="form-horizontal">
-          <div class="card-body">
-            <div class="form-group row">
-              <label for="name" class="col-sm-2 col-form-label">Name</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" placeholder="Name">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="user" class="col-sm-2 col-form-label">User Name</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="user" placeholder="User Name">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="retypePassword" class="col-sm-2 col-form-label">Retype Password</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="retypePassword" placeholder="Retype Password">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="offset-sm-2 col-sm-10">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                  <label class="form-check-label" for="exampleCheck2">Remember me</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card-footer">
-            <button type="submit" class="btn btn-info">Create</button>
-            <button type="submit" class="btn btn-danger float-right">Cancel</button>
-          </div>
-         
-        </form>
-      
-</div>
+
+        <div class="card-footer">
+          <button type="submit" class="btn btn-info">Create</button>
+          <button type="submit" class="btn btn-danger float-right">Cancel</button>
+        </div>
+
+      </form>
+    </form>
+      <div class="card-body p-0">
+        <table class="table table-striped projects">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>User Name</th>
+              <th>Password</th>
+              <th>Retype Password</th>
+
+
+              <!-- <th>Image</th> -->
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+
+            <tr *ngFor="let v of postList">
+              <td>{{v.id}}</td>
+              <td>{{v.name}}</td>
+              <td>{{v.email}}</td>
+              <td>{{v.userName}}</td>
+              <td>{{v.password}}</td>
+              <td>{{v.retypePassword}}</td>
+
+
+              <!-- <td>Image</td> -->
+              <td><button type="button" [routerLink]="['/viewProject/', v.id, 'view']" class="btn btn-primary"><i
+                    class="fas fa-folder">
+                  </i>View
+                </button> &nbsp;
+                <button type="button" [routerLink]="['/editProject/', v.id, 'edit']" class="btn btn-default"><i
+                    class="fas fa-pencil-alt">Edit
+                  </i></button> &nbsp;
+
+                <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger"><i class="fas fa-trash">
+                    Delete</i></button>
+              </td>
+
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </tbody>
+        </table>
+
+      </div>
+    
+  </div>
