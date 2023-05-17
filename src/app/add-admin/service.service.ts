@@ -30,11 +30,15 @@ export class ServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/posts/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/adminlistedit/' + task.id, task, httpOptions)
   }
 
   deleteTask(id:number) {
 
-    return this.httpService.delete(this.url + '/holidaylistdelete/'+ id)
+    return this.httpService.delete(this.url + '/admindelete/'+ id)
+  }
+
+  find(id:number) : Observable<any>{
+    return this.httpService.get(this.url + '/adminlistget/' + id)
   }
 }
