@@ -72,7 +72,7 @@ const routes: Routes = [
   {path: 'addInstall', component: LoanInstallmentComponent },
   {path: 'addAdmin', component: AddAdminComponent },
   {path: 'reqPass', component: ReqPasswordComponent },
-  {path: 'changePass', component: ChangePasswordComponent },
+  {path: 'changePass/:id', component: ChangePasswordComponent },
   {path: 'projectList', component: ProjectListComponent },
   {path: 'addProject', component: AddProjectComponent },
   {path: 'editProject/:postIds/edit', component: EditProjectComponent },
