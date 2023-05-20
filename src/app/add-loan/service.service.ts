@@ -25,7 +25,7 @@ export class ServiceService {
   }
 
   addTask(task:modelType) {
-    return this.httpService.post<modelType>(this.url + '/posts' , task, httpOptions);
+    return this.httpService.post<modelType>(this.url + '/loanaddpost' , task, httpOptions);
   }
 
   updateTask(task:modelType) {

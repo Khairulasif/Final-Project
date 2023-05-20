@@ -17,36 +17,38 @@
       </div>
       <!-- /.card-header -->
       <div class="card-body">
+        <form [formGroup]="form2" (ngSubmit)="submit()">
         <div class="row">
           <div class="col-md-12">
+            
             <div class="form-group">
               <label>Employee ID</label>
-              <input type="number" class="form-control-plaintext" disabled="disabled" style="background-color: darkgray;">
+              <input type="number" class="form-control-plaintext"  style="background-color: darkgray;" formControlName="id">
             </div>
             <!-- /.form-group -->
             <div class="form-group">
               <label>Employee Name</label>
-              <input type="text" class="form-control-plaintext" style="background-color: darkgray;">
+              <input type="text" class="form-control-plaintext" style="background-color: darkgray;" formControlName="name">
             </div>
 
             <div class="form-group">
                 <label>Loan Amount</label>
-                <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="loanAmount">
               </div>
 
               <div class="form-group">
                 <label>Approve Date</label>
-                <input type="date" class="form-control-plaintext" style="background-color: darkgray;">
+                <input type="date" class="form-control-plaintext" style="background-color: darkgray;" formControlName="approveDate">
               </div>
 
               <div class="form-group">
-                <label>Install Period</label>
-                <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                <label>Installment Period</label>
+                <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="installmentPeriod">
               </div>
 
               <div class="form-group">
-                <label>Install Amount</label>
-                <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                <label>Installment Amount</label>
+                <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="installmentAmount">
               </div>
             <!-- /.form-group -->
 
@@ -54,11 +56,11 @@
 
             <div class="form-group">
                 <label>Loan No</label>
-                <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="loanNo">
               </div>
             <div class="form-group">
               <label>Status</label>
-              <select class="form-control select2bs4" style="width: 100%;">
+              <select class="form-control select2bs4" style="width: 100%;" formControlName="status">
                 <option value="Approved">Approve</option>
                 <option value="Rejected">Rejected</option>
                 <option value="Pending">Pending</option>
@@ -71,7 +73,7 @@
   
             <div class="form-group">
               <label>Loan Details</label>
-              <textarea name="" id="" cols="30" rows="10" class="form-control-plaintext" style="background-color: darkgrey; color: rgb(0, 0, 0); font: bold;"></textarea>
+              <textarea name="" id="" cols="30" rows="10" class="form-control-plaintext" style="background-color: darkgrey; color: rgb(0, 0, 0); font: bold;" formControlName="loanDetail"></textarea>
             </div>
           </div>
   
@@ -88,6 +90,7 @@
   
           </div>
         </div>
+      </form>
       </div>
       <!-- /.card-body -->
   
