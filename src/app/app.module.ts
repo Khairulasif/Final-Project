@@ -45,6 +45,7 @@ import { ViewProjectComponent } from './view-project/view-project.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { EducationComponent } from './education/education.component';
 import { BankAccountComponent } from './bank-account/bank-account.component';
+import { LoanEditComponent } from './loan-edit/loan-edit.component';
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
     ViewProjectComponent,
     EducationComponent,
     BankAccountComponent,
+    LoanEditComponent,
 
   ],
   imports: [

@@ -7,7 +7,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1>
-             Grant Loan
+             Granted Loan
   
             </h1>
           </div>
@@ -68,19 +68,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>183</td>
-                <td>Asif</td>
-                <td>12345</td>
-                <td>1000</td>
-                <td>100</td>
+              <tr *ngFor="let v of postList">
+                <td>{{v.id}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.loanNo}}</td>
+                <td>{{v.loanAmount}}</td>
+                <td>{{v.installmentAmount}}</td>
                 <td>200</td>
                 <td>800</td>
-                <td>10/04/23</td>
-                <td>Granted</td>
+                <td>{{v.approveDate}}</td>
+                <td>{{v.status}}</td>
+                <td><button type="button" [routerLink]="['/loanEdit/', v.id, 'edit']"><i class="fas fa-edit">Edit</i></button> &nbsp;&nbsp;
+                    <button type="button" (click)="deleteTask(v.id)"><i class="fas fa-trash-alt">Delete</i></button></td>
                 
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-                <td><i class="fas fa-trash-alt"></i></td>
   
               </tr>
              

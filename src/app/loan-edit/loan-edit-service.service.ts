@@ -4,6 +4,7 @@ import { modelType } from './model';
 import { Observable } from 'rxjs';
 
 
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -12,7 +13,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class LoanListServiceService {
+export class LoanEditServiceService {
 
   private url = 'http://localhost:8080/api';
 
@@ -20,7 +21,7 @@ export class LoanListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/loanlistget');
+    const task = this.httpService.get<modelType[]>(this.url + '/empget');
     return task;
   }
 
@@ -30,11 +31,15 @@ export class LoanListServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/posts/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/loanedit/' + task.id, task, httpOptions)
   }
 
   deleteTask(id:number) {
 
     return this.httpService.delete(this.url + '/loandelete/'+ id)
+  }
+
+  find(id:number) : Observable<any>{
+    return this.httpService.get(this.url + '/loanlist/' + id)
   }
 }
