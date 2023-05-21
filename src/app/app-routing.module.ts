@@ -37,6 +37,7 @@ import { ViewProjectComponent } from './view-project/view-project.component';
 import { EducationComponent } from './education/education.component';
 import { BankAccountComponent } from './bank-account/bank-account.component';
 import { LoanEditComponent } from './loan-edit/loan-edit.component';
+import { EditInstallmentListComponent } from './edit-installment-list/edit-installment-list.component';
 
 // import { LoginComponent } from './login/login.component';
 
@@ -81,6 +82,7 @@ const routes: Routes = [
   {path: 'employeeEducationForm', component: EducationComponent },
   {path: 'bankAccInformation', component: BankAccountComponent },
   {path: 'loanEdit/:postIds/edit', component: LoanEditComponent },
+  {path: 'loanInstallment/:postIds/edit', component: EditInstallmentListComponent },
 
   {path: "**" , component: DashboardComponent}
 

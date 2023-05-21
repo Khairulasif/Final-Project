@@ -60,7 +60,7 @@
                 <th>Empoyee Name</th>
                 <th>Loan No</th>
                 <th>Installment Amount</th>
-                <th>Date</th>
+                <th>Receive Date</th>
                 <th>Receiver</th>
                 <th>Installment No</th>
                 <th>Notes</th>
@@ -70,66 +70,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>183</td>
-                <td>Asif</td>
-                <td>123456</td>
-                <td>100</td>
-                <td>01/04/23</td>
-                <td>Mamun</td>
+              <tr *ngFor="let v of postList">
+                <td>{{v.id}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.loanNo}}</td>
+                <td>{{v.installmentAmount}}</td>
+                <td>{{v.receiveDate}}</td>
+                <td>{{v.receiver}}</td>
                 
-                <td>2</td>
-                <td>Received</td>
+                <td>{{v.installmentNo}}</td>
+                <td>{{v.note}}</td>
                 
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-                <td><i class="fas fa-trash-alt"></i></td>
+                <td><button type="button" [routerLink]="['/loanInstallment/', v.id, 'edit']"><i class="fas fa-edit">Edit</i></button> &nbsp;&nbsp;
+                  <button type="button" (click)="deleteTask(v.id)"><i class="fas fa-trash-alt">Delete</i></button></td>
   
               </tr>
-              <tr>
-                <td>183</td>
-                <td>Asif</td>
-                <td>123456</td>
-                <td>100</td>
-                <td>01/04/23</td>
-                <td>Mamun</td>
-                
-                <td>2</td>
-                <td>Received</td>
-                
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-                <td><i class="fas fa-trash-alt"></i></td>
-  
-              </tr>
-              <tr>
-                <td>183</td>
-                <td>Asif</td>
-                <td>123456</td>
-                <td>100</td>
-                <td>01/04/23</td>
-                <td>Mamun</td>
-                
-                <td>2</td>
-                <td>Received</td>
-                
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-                <td><i class="fas fa-trash-alt"></i></td>
-  
-              </tr>
-              <tr>
-                <td>183</td>
-                <td>Asif</td>
-                <td>123456</td>
-                <td>100</td>
-                <td>01/04/23</td>
-                <td>Mamun</td>
-                
-                <td>2</td>
-                <td>Received</td>
-                
-                <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
-                <td><i class="fas fa-trash-alt"></i></td>
-  
-              </tr>
+             
+              
+              
             </tbody>
           </table>
         </div>

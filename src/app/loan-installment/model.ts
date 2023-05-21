@@ -6,7 +6,7 @@ export interface modelType {
     name:string;
     loanNo:number;
     installmentAmount:number;
-    ReceiveDate:Date;
+    receiveDate:Date;
     receiver:string;
     installmentNo:number;
     note:string;
