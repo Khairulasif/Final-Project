@@ -24,7 +24,7 @@ export class EditInstallmentService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/loanedit/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/loaninstallmentlistedit/' + task.id, task, httpOptions)
   }
 
   find(id:number) : Observable<any>{
