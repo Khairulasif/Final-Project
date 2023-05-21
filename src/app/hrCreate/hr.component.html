@@ -68,10 +68,10 @@
                   <div class="form-group">
                     <label for="department">Department :</label>&nbsp;
                     <select name="department" id="department" formControlName="department">
-                      <option value="Administration">Administration</option>
-                      <option value="Customer Support">Customer Support</option>
+                      <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
+                      <!-- <option value="Customer Support">Customer Support</option>
                       <option value="Research">Research</option>
-                      <option value="Finance">Finance</option>
+                      <option value="Finance">Finance</option> -->
 
                     </select>
                   </div>
@@ -89,11 +89,11 @@
               <div class="form-group">
                 <label for="designation">Designation :</label>&nbsp;
                 <select name="designation" id="designation" formControlName="designation">
-                  <option value="Senior Officer">Senior Officer</option>
-                  <option value="Vice Chairmen">Vice Chairmen</option>
+                  <option value="Senior Officer" *ngFor="let v of designationList" [value]="v.name">{{v.name}}</option>
+                  <!-- <option value="Vice Chairmen">Vice Chairmen</option>
                   <option value="Chief Executive Officer">Chief Executive Officer</option>
                   <option value="Manager">Manager</option>
-                  <option value="Guard">Guard</option>
+                  <option value="Guard">Guard</option> -->
                 </select>
               </div>
             </div>

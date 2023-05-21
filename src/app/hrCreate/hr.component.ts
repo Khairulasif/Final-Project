@@ -3,6 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { EmpServiceService } from './emp-service.service';
+import { modelDepartment } from './modelDepartment';
+import { modelDesignation } from './modelDesignation';
 
 @Component({
   selector: 'app-hr',
@@ -11,13 +13,25 @@ import { EmpServiceService } from './emp-service.service';
 })
 export class HrComponent implements OnInit {
 
-  
+  designationList !: modelDesignation[];
+
+  departmentList !: modelDepartment[];
+
   form2 !: FormGroup;
 
   constructor(public services: EmpServiceService, private router: Router){}
 
 
   ngOnInit(): void {
+
+
+    this.services.getDepartment().subscribe((newPost: modelDepartment[]) => {
+    this.departmentList = newPost;
+    console.log(this.departmentList) })
+
+    this.services.getDesignation().subscribe((newPost: modelDesignation[]) => {
+      this.designationList = newPost;
+      console.log(this.designationList) })
 
     this.form2 = new FormGroup({
     id: new FormControl(),

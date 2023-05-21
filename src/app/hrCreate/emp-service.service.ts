@@ -2,6 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { modelType } from './model';
 import { Observable } from 'rxjs';
+import { modelDepartment } from './modelDepartment';
+import { modelDesignation } from './modelDesignation';
 
 
 const httpOptions = {
@@ -38,5 +40,16 @@ export class EmpServiceService {
   deleteTask(id:number) {
 
     return this.httpService.delete(this.url + '/empdelete/'+ id)
+  }
+
+
+  getDepartment() : Observable<modelDepartment[]> {
+    const task = this.httpService.get<modelDepartment[]>(this.url + '/departmentget');
+    return task;
+  }
+
+  getDesignation() : Observable<modelDesignation[]> {
+    const task = this.httpService.get<modelDesignation[]>(this.url + '/designationget');
+    return task;
   }
 }
