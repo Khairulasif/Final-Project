@@ -28,13 +28,18 @@ export class LeaveAppServiceService {
     return this.httpService.post<modelType>(this.url + '/emppost' , task, httpOptions);
   }
 
-  updateTask(task:modelType) {
+  updateTaskApprove(task:modelType) {
+    return this.httpService.put<modelType>(this.url + '/approveedit/' + task.id, task, httpOptions)
+  }
 
-    return this.httpService.put<modelType>(this.url + '/posts/' + task.id, task, httpOptions)
+  updateTaskReject(task:modelType) {
+    return this.httpService.put<modelType>(this.url + '/rejectedit/' + task.id, task, httpOptions)
   }
 
   deleteTask(id:number) {
 
     return this.httpService.delete(this.url + '/holidaylistdelete/'+ id)
   }
+
+ 
 }

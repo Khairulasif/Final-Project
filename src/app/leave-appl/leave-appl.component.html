@@ -91,11 +91,20 @@
                   <td>{{v.applyDate}}</td>
                   <td>{{v.startDate}}</td>
                   <td>{{v.endDate}}</td>
-                  <td>{{v.status}}</td>
+
+          
+                  <!-- <td ><span class="badge bg-success">{{v.status}}</span></td> -->
+
+                  <td *ngIf="v.status == 'Approved'"><span class="badge bg-success">{{v.status}}</span></td>
+                  <td *ngIf="v.status == 'Rejected'"><span class="badge badge-danger">{{v.status}}</span></td>
+
+                  <td>
+                    <button (click)="approveItem(v)" class="btn btn-success"><span class="badge badge">Approve</span></button>&nbsp;&nbsp;
+                    <button (click)="rejectItem(v)" class="btn btn-danger"><span class="badge badge-danger">Reject</span></button>
+                  </td>
   
   
-                 <td><a href=""><span class="badge badge">Approve</span></a>&nbsp;&nbsp;
-                 <a href=""><span class="badge badge-danger">Reject</span></a></td>
+                 
   
                 </tr>
                 

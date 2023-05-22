@@ -80,9 +80,9 @@
               <td>{{v.nic}}</td>
               <td>{{v.address}}</td>
               <!-- <td>Image</td> -->
-              <td><button type="button" [routerLink]="['/employeeEdit/', v.id, 'edit']">Edit</button> &nbsp;&nbsp;
+              <td><button type="button" [routerLink]="['/employeeEdit/', v.id, 'edit']" class="btn btn-default">Edit</button> &nbsp;&nbsp;
                 
-                <button type="button" (click)="deleteTask(v.id)">Delete</button></td>
+                <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger">Delete</button></td>
 
             </tr>
             <!-- <tr>

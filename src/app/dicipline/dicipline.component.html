@@ -107,10 +107,14 @@
           <td>{{v.name}}</td>
           <td>{{v.type}}</td>
           <td>{{v.description}}</td>
-          <td><span class="badge badge-danger">{{v.action}}</span></td>
+          <td *ngIf="v.action == 'Verbal Warning'"><span class="badge bg-primary">{{v.action}}</span></td>
+          <td *ngIf="v.action == 'Writing Warning'"><span class="badge bg-secondary">{{v.action}}</span></td>
+          <td *ngIf="v.action == 'Demotion'"><span class="badge badge-warning text-black">{{v.action}}</span></td>
+          <td *ngIf="v.action == 'Suspention'"><span class="badge badge-danger">{{v.action}}</span></td>
           
           <td><button type="button" (click)="edit(v)" class="btn-update">Update</button>&nbsp;&nbsp;
-          <button type="button" (click)="delete(v.id)" class="btn-danger">Delete</button></td>
+               <button type="button" (click)="delete(v.id)" class="btn-danger">Delete</button>
+        </td>
 
         </tr>
         <!-- <tr>
