@@ -36,7 +36,7 @@ export class AttenReportServiceService {
     return this.httpService.delete(this.url + '/departmendelete/'+ id)
   }
 
-  find(id:number) : Observable<any>{
-    return this.httpService.get(this.url + '/departmentget/' + id)
+  findEmp(id:number) : Observable<any>{
+    return this.httpService.get(this.url + '/empgetforattendance/' + id)
   }
 }
