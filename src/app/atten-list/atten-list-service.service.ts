@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { modelType } from './model';
+import { modelDepartment } from './modelDepartment';
 
 
 const httpOptions = {
@@ -41,6 +42,11 @@ export class AttenListServiceService {
 
   getByDepartment(department:String) {
     return this.httpService.get<modelType[]>(this.url + '' + department)
+  }
+
+  getDepartment() : Observable<modelDepartment[]> {
+    const task = this.httpService.get<modelDepartment[]>(this.url + '/departmentget');
+    return task;
   }
 
   // find(id:number) : Observable<any>{

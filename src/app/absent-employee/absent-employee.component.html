@@ -1,0 +1,158 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            Absent Employee
+
+          </h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Attendance</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab" routerLink="/attenList">Today's Attendance</a></li>
+    <li class="nav-item"><a class="nav-link" href="" data-toggle="tab" routerLink="/absentEmp">Absent Employee</a></li>
+  </ul>
+  <!-- <div class="container-fluid">
+  <div class="row">
+  
+  
+  <div class= "col-md-2">
+    <button type="button" class="btn btn-block bg-gradient-secondary btn-lg"  routerLink="attenReport" ><i class="fas fa-user-plus"></i> Today's Attendance</button>
+  </div>
+  <div class= "col-md-2">
+    <button type="button" class="btn btn-block bg-gradient-secondary btn-lg"  routerLink="/absentEmp" ><i class="fas fa-user-plus"></i> Absent Employee</button>
+  </div>
+  
+  
+  
+  
+  </div>
+  </div> -->
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+
+          <label for="name">Set Department</label><br>
+          <!-- <input [(ngModel)]="searchhr" type="text" id="name" formControlName="name"> -->
+          <select name="department" id="department" formControlName="department">
+            <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
+           
+          </select>
+          <br>
+          <br>
+          <button type="submit" class="btn-primary">Set</button>
+
+
+        </div>
+
+
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+         
+            <label for="setDate">Set Date</label><br>
+            <input type="date" class="form-control" id="setDate" formControlName="">
+            
+            <br>
+            
+            <button  type="submit" class="btn-primary">Set</button>
+            
+         
+        </div>
+  
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Attendance List</h3>
+
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <!-- <input [(ngModel)]="searchhr" type="text" name="table_search" class="form-control float-right" placeholder="Search"> -->
+
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-default">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Empoyee ID</th>
+                <th>Empoyee Name</th>
+
+                <th>Date</th>
+                <th>Sign In</th>
+                <th>Sign Out</th>
+                <th>Working Hour</th>
+                <th>Status</th>
+                <th>Action</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let v of postList | filter:searchhr">
+                <td>{{v.id}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.date}}</td>
+                <td>{{v.signIn}}</td>
+                <td>{{v.signOut}}</td>
+                <td>{{v.workingHour}}</td>
+                <td>{{v.status}}</td>
+  
+                <td><button type="button" [routerLink]="['/attendanceList/', v.id, 'view']"
+                  class="btn btn-primary"><i class="fas fa-folder">
+                  </i>Generate Report
+              </button> &nbsp; -->
+              <!-- <button type="button" [routerLink]="['/editProject/', v.id, 'edit']"
+                  class="btn btn-default"><i class="fas fa-pencil-alt">Edit
+                  </i></button> &nbsp; -->
+
+              <!-- <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger"><i
+                      class="fas fa-trash">
+                      Delete</i></button> -->
+              <!-- </td> -->
+
+              <!-- <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td> -->
+
+              <!-- </tr> -->
+
+
+
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+
+</div>

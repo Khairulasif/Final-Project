@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { modelType } from './model';
 import { AttenListServiceService } from './atten-list-service.service';
+import { modelDepartment } from './modelDepartment';
 
 @Component({
   selector: 'app-atten-list',
@@ -9,6 +10,10 @@ import { AttenListServiceService } from './atten-list-service.service';
 })
 export class AttenListComponent implements OnInit{
 
+
+
+
+  departmentList!: modelDepartment[];
   searchDepartment: any;
   searchhr: any;
   postList!: modelType[];
@@ -16,6 +21,14 @@ export class AttenListComponent implements OnInit{
   constructor(private services: AttenListServiceService) { }
 
   ngOnInit(): void {
+
+    this.services.getDepartment().subscribe((newPost: modelDepartment[]) => {
+      this.departmentList = newPost;
+      console.log(this.departmentList) })
+  
+
+
+
     this.services.getTask().subscribe((newPost: modelType[]) => {
        this.postList = newPost; console.log(this.postList) })
   }

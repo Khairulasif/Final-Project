@@ -21,34 +21,61 @@
       </div>
     </div><!-- /.container-fluid -->
   </section>
+
+
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" href="#activity" data-toggle="tab">Today's Attendance</a></li>
+    <li class="nav-item"><a class="nav-link" href="" data-toggle="tab"
+        routerLink="/absentEmp">Absent Employee</a></li>
+    
+  </ul>
+  <!-- <div class="container-fluid">
 <div class="row">
-<!-- <div class= "col-md-4">
-  <a href=""  routerLink="/addAtten"><button type="button" class="btn btn-block bg-gradient-secondary btn-lg"><i class="fas fa-user-plus"></i> Add Attendance</button></a>
+
+
+<div class= "col-md-2">
+  <button type="button" class="btn btn-block bg-gradient-secondary btn-lg"  routerLink="/attenReport" ><i class="fas fa-user-plus"></i> Today's Attendance</button>
+</div>
+<div class= "col-md-2">
+  <button type="button" class="btn btn-block bg-gradient-secondary btn-lg"  routerLink="/absentEmp" ><i class="fas fa-user-plus"></i> Absent Employee</button>
+</div>
+ 
+
+
+
+</div>
 </div> -->
-
-<div class= "col-md-4">
-  <a href="" routerLink="/attenReport"><button type="button" class="btn btn-block bg-gradient-secondary btn-lg" ><i class="fas fa-user-plus"></i> Attendance Report</button></a>
-</div>
-
-
-</div>
 
 <div class="card-body">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
       <div class="form-group">
        
           <label for="name">Set Department</label><br>
           <!-- <input [(ngModel)]="searchhr" type="text" id="name" formControlName="name"> -->
           <select name="department" id="department" formControlName="department">
-            <option value="Administration">Administration</option>
-            <option value="Customer Support">Customer Support</option>
-            <option value="Research">Research</option>
-            <option value="Finance">Finance</option>
+            <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
+            
 
           </select>
           <br>
           <br>
+          <button  type="submit" class="btn-primary">Set</button>
+          
+       
+      </div>
+
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+       
+          <label for="setDate">Set Date</label><br>
+          <input type="date" class="form-control" id="setDate" formControlName="">
+          
+          <br>
+          
           <button  type="submit" class="btn-primary">Set</button>
           
        
@@ -113,9 +140,9 @@
                 class="btn btn-default"><i class="fas fa-pencil-alt">Edit
                 </i></button> &nbsp; -->
 
-            <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger"><i
+            <!-- <button type="button" (click)="deleteTask(v.id)" class="btn btn-danger"><i
                     class="fas fa-trash">
-                    Delete</i></button>
+                    Delete</i></button> -->
         </td>
 
               <!-- <td><i class="fas fa-edit" routerLink="/employeeEdit"></i></td>

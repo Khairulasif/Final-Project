@@ -13,7 +13,9 @@ export class AttenReportComponent implements OnInit{
 
   empList!: modelGetEmp;
 
-  id: number = 97;
+  id: number = 123;
+
+  statusGet !: any;
 
   form2 !: FormGroup;
   // fromDate: any; toDate: any;
@@ -36,44 +38,23 @@ export class AttenReportComponent implements OnInit{
         department: new FormControl(this.empList.department),
         designation: new FormControl(this.empList.designation),
 
-        status: new FormControl(),
+        
+
+        status: new FormControl(this.statusGet),
         
         
       })
       
     });
 
+    if(this.id != null) {
+      this.statusGet = "Present";
+    } else {
+      this.statusGet = "Absent";
+    }
 
-    // id:number;
-    // fname:string;
-    // lname:string;
-    // mobile:number;
-    // email:string;
-    // gender:string;
-    // department:string;
-    // designation:string;
 
-    // nationality:string;
-    // nic:number;
-    // address:string;
-    // dateOfBirth:Date;
-    // joiningDate:Date;
-    // basicSalary:number;
-
-    // this.form2 = new FormGroup({
-    // id: new FormControl(),
-    // name:new FormControl(),
-    // date:new FormControl(),
-    // signIn:new FormControl(),
-    // signOut:new FormControl(),
-    // workingHour:new FormControl(),
-    // department:new FormControl(),
-    // designation:new FormControl(),
     
-    // status:new FormControl(),
-    
-    
-    // })
   }
 
   submit() {
