@@ -11,9 +11,11 @@ import { modelGetEmp } from './modelGetEmp';
 })
 export class AttenReportComponent implements OnInit{
 
-  empList!: modelGetEmp;
+  // empList!: 
 
-  empid: number = 123;
+  empGet!: modelGetEmp;
+
+  submittedEmpid: number = 102 ;
 
   statusGet !: any;
 
@@ -24,20 +26,23 @@ export class AttenReportComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.services.findEmp(this.empid).subscribe((task: modelGetEmp) => {
-      this.empList = task
-      console.log('------------------------', this.empList)
+
+
+
+    this.services.findEmp(this.submittedEmpid).subscribe((task: modelGetEmp) => {
+      this.empGet = task
+      console.log('------------------------', this.empGet)
 
       this.form2 = new FormGroup({
         id: new FormControl(),
-        empId: new FormControl(this.empList.empId),
-        name: new FormControl(this.empList.fname),
+        empId: new FormControl(this.empGet.id),
+        name: new FormControl(this.empGet.fname),
         date: new FormControl(),
         signIn: new FormControl(),
         signOut: new FormControl(),
         workingHour: new FormControl(),
-        department: new FormControl(this.empList.department),
-        designation: new FormControl(this.empList.designation),
+        department: new FormControl(this.empGet.department),
+        designation: new FormControl(this.empGet.designation),
 
         
 
@@ -48,7 +53,7 @@ export class AttenReportComponent implements OnInit{
       
     });
 
-    if(this.empid != null) {
+    if(this.submittedEmpid  != null) {
       this.statusGet = "Present";
     } else {
       this.statusGet = "Absent";

@@ -34,7 +34,7 @@ export class HrComponent implements OnInit {
       console.log(this.designationList) })
 
     this.form2 = new FormGroup({
-    id: new FormControl(),
+    employeeId: new FormControl(),
     fname:new FormControl(),
     lname:new FormControl(),
     mobile:new FormControl(),
