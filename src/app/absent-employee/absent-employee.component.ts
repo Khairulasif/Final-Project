@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { modelDepartment } from './modelDepartment';
 import { AbsEmpServiceService } from './abs-emp-service.service';
+import { modelType } from './model';
 
 @Component({
   selector: 'app-absent-employee',
@@ -15,11 +16,15 @@ import { AbsEmpServiceService } from './abs-emp-service.service';
 
 export class AbsentEmployeeComponent implements OnInit{
 
-
+  postList!: modelType[];
+  
   departmentList!: modelDepartment[];
 
+  currentDate!: Date;
 
-  constructor(private services: AbsEmpServiceService) { }
+  constructor(private services: AbsEmpServiceService) {
+    this.currentDate = new Date();
+   }
 
 
 
@@ -27,7 +32,14 @@ export class AbsentEmployeeComponent implements OnInit{
   ngOnInit(): void {
     this.services.getDepartment().subscribe((newPost: modelDepartment[]) => {
       this.departmentList = newPost;
-      console.log(this.departmentList) })
+       })
+
+       this.services.getTask().subscribe((newPost: modelType[]) => {
+        this.postList = newPost; console.log(this.postList) })
+
+        
   }
+
+ 
 
 }

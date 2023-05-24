@@ -1,7 +1,7 @@
 export interface modelGetEmp{
 
   
-    id:number;
+    employeeId:number;
     fname:string;
     lname:string;
     mobile:number;

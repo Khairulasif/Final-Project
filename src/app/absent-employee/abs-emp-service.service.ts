@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { modelDepartment } from './modelDepartment';
 import { Observable } from 'rxjs';
+import { modelType } from './model';
 
 
 
@@ -20,10 +21,10 @@ export class AbsEmpServiceService {
 
   constructor(private httpService: HttpClient) {}
 
-  // getTask() : Observable<modelType[]> {
-  //   const task = this.httpService.get<modelType[]>(this.url + '/addattenlistget');
-  //   return task;
-  // }
+  getTask() : Observable<modelType[]> {
+    const task = this.httpService.get<modelType[]>(this.url + '/absentList');
+    return task;
+  }
 
   // addTask(task:modelType) {
   //   return this.httpService.post<modelType>(this.url + '/emppost' , task, httpOptions);

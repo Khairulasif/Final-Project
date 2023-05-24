@@ -24,7 +24,7 @@ export class AttenListComponent implements OnInit{
 
     this.services.getDepartment().subscribe((newPost: modelDepartment[]) => {
       this.departmentList = newPost;
-      console.log(this.departmentList) })
+      })
   
 
 

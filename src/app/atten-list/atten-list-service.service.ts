@@ -22,7 +22,7 @@ export class AttenListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/addattenlistget');
+    const task = this.httpService.get<modelType[]>(this.url + '/atteendanceList');
     return task;
   }
 
