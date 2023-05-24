@@ -9,7 +9,7 @@ export interface modelType{
     signOut:Time;
     workingHour:Time;
     department:string;
-    designation:string;
+    designation:string;  
     status:string;
     
   }
