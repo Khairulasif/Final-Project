@@ -15,6 +15,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AttenListServiceService {
+  
+  
 
   private url = 'http://localhost:8080/api';
 
@@ -40,14 +42,20 @@ export class AttenListServiceService {
     return this.httpService.delete(this.url + '/attenlistdelete/'+ id)
   }
 
-  getByDepartment(department:String) {
-    return this.httpService.get<modelType[]>(this.url + '' + department)
+  getAttenByDepart(department:String) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDepartment/' + department)
   }
 
   getDepartment() : Observable<modelDepartment[]> {
     const task = this.httpService.get<modelDepartment[]>(this.url + '/departmentget');
     return task;
   }
+
+  getAttenByDate(selectedDate: any) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDate/' + selectedDate)
+  }
+
+  
 
   // find(id:number) : Observable<any>{
   //   return this.httpService.get(this.url + '/departmentget/' + id)

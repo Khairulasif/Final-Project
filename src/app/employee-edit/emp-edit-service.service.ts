@@ -31,7 +31,7 @@ export class EmpEditServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/empedit/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/empedit/' + task.employeeId, task, httpOptions)
   }
 
   deleteTask(id:number) {

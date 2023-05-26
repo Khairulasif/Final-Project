@@ -23,7 +23,7 @@ export class AbsentEmployeeComponent implements OnInit{
   currentDate!: Date;
 
   constructor(private services: AbsEmpServiceService) {
-    this.currentDate = new Date();
+   
    }
 
 
@@ -35,11 +35,17 @@ export class AbsentEmployeeComponent implements OnInit{
        })
 
        this.services.getTask().subscribe((newPost: modelType[]) => {
-        this.postList = newPost; console.log(this.postList) })
+        this.postList = newPost; console.log(this.postList)})
 
-        
+       
   }
 
- 
+  saveAbsent(){
+    this.services.saveAbsEmp(this.postList).subscribe(
+      () => console.log("data saved"),
+      (error: any) =>  console.log("Error saving data", error),
+      
+    );
+  }
 
 }

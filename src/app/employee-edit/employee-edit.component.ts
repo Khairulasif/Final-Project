@@ -16,7 +16,7 @@ export class EmployeeEditComponent implements OnInit {
   id!: number;
   postList!: modelType;
   form2: FormGroup = new FormGroup({
-    id: new FormControl(),
+    employeeId: new FormControl(),
     fname: new FormControl(),
     lname: new FormControl(),
     mobile: new FormControl(),
@@ -48,7 +48,7 @@ export class EmployeeEditComponent implements OnInit {
       console.log('------------------------', this.postList)
 
       this.form2 = new FormGroup({
-        id: new FormControl(this.postList.id),
+        employeeId: new FormControl(this.postList.employeeId),
         fname: new FormControl(this.postList.fname),
         lname: new FormControl(this.postList.lname),
         mobile: new FormControl(this.postList.mobile),

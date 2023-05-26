@@ -12,10 +12,10 @@ import { modelGetEmp } from './modelGetEmp';
 export class AttenReportComponent implements OnInit{
 
   // empList!: 
-
+ 
   empGet!: modelGetEmp;
 
-  submittedEmpid: number = 96 ;
+  submittedEmpid: number = 98 ;
 
   statusGet !: any;
 
@@ -33,11 +33,14 @@ export class AttenReportComponent implements OnInit{
       this.empGet = task
       console.log('------------------------', this.empGet)
 
+      const currentDate = new Date();
+      const signInTime = currentDate.toLocaleTimeString();
+
       this.form2 = new FormGroup({
         id: new FormControl(),
         empId: new FormControl(this.empGet.employeeId),
         name: new FormControl(this.empGet.fname),
-        date: new FormControl(),
+        date: new FormControl(new Date()),
         signIn: new FormControl(),
         signOut: new FormControl(),
         workingHour: new FormControl(),

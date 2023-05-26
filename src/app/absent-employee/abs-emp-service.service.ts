@@ -52,4 +52,8 @@ export class AbsEmpServiceService {
   // find(id:number) : Observable<any>{
   //   return this.httpService.get(this.url + '/departmentget/' + id)
   // }
+
+  saveAbsEmp(task: modelType[]) {
+    return this.httpService.post<modelType[]>(this.url + '/absentEmpPost' , task, httpOptions);
+  }
 }

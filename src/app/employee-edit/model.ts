@@ -1,5 +1,5 @@
 export interface modelType{
-    id:number;
+    employeeId:number;
     fname:string;
     lname:string;
     mobile:number;

@@ -32,7 +32,7 @@ export class EmplistServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/posts/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/posts/' + task.employeeId, task, httpOptions)
   }
 
   deleteTask(id:number) {

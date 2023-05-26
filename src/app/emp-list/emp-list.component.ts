@@ -27,7 +27,7 @@ export class EmpListComponent implements OnInit {
 
 
     this.services.deleteTask(id).subscribe(res => {
-       this.postList = this.postList.filter(item => item.id !== id);
+       this.postList = this.postList.filter(item => item.employeeId !== id);
       console.log('Post deleted successfully!');
       //  this.services.getTask().subscribe((newPost: modelType[]) => {this.postList = newPost; console.log(this.postList)})
     })

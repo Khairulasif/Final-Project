@@ -11,7 +11,8 @@ import { modelDepartment } from './modelDepartment';
 export class AttenListComponent implements OnInit{
 
 
-
+  selectedDepartment!: string;
+  selectedDate!: any;
 
   departmentList!: modelDepartment[];
   searchDepartment: any;
@@ -34,7 +35,21 @@ export class AttenListComponent implements OnInit{
   }
 
   
+  onSubmit(): void {
+    
+    console.log(this.selectedDepartment);
 
+    this.services.getAttenByDepart(this.selectedDepartment).subscribe((newPost: modelType[]) => {
+      this.postList = newPost; console.log(this.postList) })
+  }
+
+  onSubmitDate(): void {
+    
+    console.log(this.selectedDate);
+
+    this.services.getAttenByDate(this.selectedDate).subscribe((newPost: modelType[]) => {
+      this.postList = newPost; console.log(this.postList) })
+  }
 
   deleteTask(id: number) {
 
