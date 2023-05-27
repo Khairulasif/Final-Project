@@ -24,7 +24,7 @@ export class AttenListServiceService {
   constructor(private httpService: HttpClient) {}
 
   getTask() : Observable<modelType[]> {
-    const task = this.httpService.get<modelType[]>(this.url + '/atteendanceList');
+    const task = this.httpService.get<modelType[]>(this.url + '/attendanceList');
     return task;
   }
 
