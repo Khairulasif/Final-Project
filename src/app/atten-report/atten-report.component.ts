@@ -15,7 +15,7 @@ export class AttenReportComponent implements OnInit{
  
   empGet!: modelGetEmp;
 
-  submittedEmpid: number = 101  ;
+  submittedEmpid: number = 134 ;
 
   statusGet !: any;
 
@@ -34,7 +34,9 @@ export class AttenReportComponent implements OnInit{
       console.log('------------------------', this.empGet)
 
       const currentDate = new Date();
+      // const signInTime = currentDate.toLocaleTimeString();
       const signInTime = currentDate.toLocaleTimeString();
+      
 
       this.form2 = new FormGroup({
         id: new FormControl(),

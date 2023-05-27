@@ -24,6 +24,10 @@ export class AbsentEmployeeComponent implements OnInit{
 
   currentDate!: Date;
 
+  selectedDepartment!: string;
+  selectedDate!: any;
+
+
   constructor(private services: AbsEmpServiceService) {
    
    }
@@ -40,6 +44,22 @@ export class AbsentEmployeeComponent implements OnInit{
         this.postList = newPost; console.log(this.postList)})
 
        
+  }
+
+  onSubmit(): void {
+    
+    console.log(this.selectedDepartment);
+
+    this.services.getAttenByDepart(this.selectedDepartment).subscribe((newPost: modelType[]) => {
+      this.postList = newPost; console.log(this.postList) })
+  }
+
+  onSubmitDate(): void {
+    
+    console.log(this.selectedDate);
+
+    this.services.getAttenByDate(this.selectedDate).subscribe((newPost: modelType[]) => {
+      this.postList = newPost; console.log(this.postList) })
   }
 
   saveAbsent(){

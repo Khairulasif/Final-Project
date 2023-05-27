@@ -55,5 +55,14 @@ export class AbsEmpServiceService {
 
   saveAbsEmp(task: modelType[]) {
     return this.httpService.post<modelType[]>(this.url + '/absentEmpPost' , task, httpOptions);
+    console.log("Success");
+  }
+
+  getAttenByDepart(department:String) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDepartmentAbsentEmp/' + department)
+  }
+
+  getAttenByDate(selectedDate: any) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDateAbsentEmp/' + selectedDate)
   }
 }

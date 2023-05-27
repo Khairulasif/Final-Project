@@ -47,14 +47,15 @@
         <div class="form-group">
 
           <label for="name">Set Department</label><br>
-          <!-- <input [(ngModel)]="searchhr" type="text" id="name" formControlName="name"> -->
-          <select name="department" id="department" formControlName="department">
+          <select name="department" id="department" [(ngModel)]="selectedDepartment">
+            
             <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
-           
+            
+
           </select>
           <br>
           <br>
-          <button type="submit" class="btn-primary">Set</button>
+          <button  type="submit" class="btn-primary" (click)="onSubmit()">Set</button>
 
 
         </div>
@@ -65,12 +66,12 @@
       <div class="col-md-4">
         <div class="form-group">
          
-            <label for="setDate">Set Date</label><br>
-            <input type="date" class="form-control" id="setDate" formControlName="">
-            
-            <br>
-            
-            <button  type="submit" class="btn-primary">Set</button>
+          <label for="setDate">Set Date</label><br>
+          <input type="date" class="form-control" id="setDate"  [(ngModel)]="selectedDate">
+          
+          <br>
+          
+          <button  type="submit" class="btn-primary" (click)="onSubmitDate()">Set</button>
             
          
         </div>
@@ -130,6 +131,13 @@
 
             </tbody>
           </table>
+
+          <div class="card-footer" style="align-self: center;">
+            <div class="flex-parent jc-center">
+              <button type="button" class="btn btn-primary" (click)="saveAbsent()">Submit</button>&nbsp;
+    
+            </div>
+          </div>
         </div>
         <!-- /.card-body -->
       </div>
