@@ -16,6 +16,8 @@ import { modelType } from './model';
 
 export class AbsentEmployeeComponent implements OnInit{
 
+  searchhr: any;
+
   postList!: modelType[];
   
   departmentList!: modelDepartment[];

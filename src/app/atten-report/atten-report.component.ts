@@ -15,7 +15,7 @@ export class AttenReportComponent implements OnInit{
  
   empGet!: modelGetEmp;
 
-  submittedEmpid: number = 100 ;
+  submittedEmpid: number = 101  ;
 
   statusGet !: any;
 
