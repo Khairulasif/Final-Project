@@ -13,6 +13,12 @@ import { modelDesignation } from './modelDesignation';
 })
 export class HrComponent implements OnInit {
 
+
+
+  gradeA : number = 20000; 
+  gradeB : number = 30000; 
+  gradeC : number = 40000; 
+
   designationList !: modelDesignation[];
 
   departmentList !: modelDepartment[];
@@ -51,6 +57,25 @@ export class HrComponent implements OnInit {
     basicSalary:new FormControl(),
     // image:new FormControl(),
     })
+  }
+
+  basicSalaries: any;
+
+  salaryGet() {
+
+   
+    
+    
+    if(this.form2.value.designation == "Junior Officer" ) {
+      this.basicSalaries = this.gradeA
+      
+    }
+    if(this.form2.value.designation == "Senior Officer" ) {
+      this.basicSalaries = this.gradeB
+    }
+    if(this.form2.value.designation == "Cheif Executive Officer" ) {
+      this.basicSalaries = this.gradeC
+    }
   }
 
   

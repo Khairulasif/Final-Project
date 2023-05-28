@@ -88,7 +88,7 @@
                 <div class="col-md-6">
               <div class="form-group">
                 <label for="designation">Designation :</label>&nbsp;
-                <select name="designation" id="designation" formControlName="designation">
+                <select name="designation" id="designation" formControlName="designation" (change)="salaryGet()">
                   <option *ngFor="let v of designationList" [value]="v.name">{{v.name}}</option>
                   <!-- <option value="Vice Chairmen">Vice Chairmen</option>
                   <option value="Chief Executive Officer">Chief Executive Officer</option>
@@ -128,7 +128,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="nic-no">Basic Salary</label>
-                    <input type="number" class="form-control" id="nic-no" formControlName="basicSalary">
+                    <input type="number" class="form-control" id="nic-no" formControlName="basicSalary" [(ngModel)]="basicSalaries">
                   </div>
                 </div>
               </div>
