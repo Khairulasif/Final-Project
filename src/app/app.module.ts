@@ -48,6 +48,8 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
 import { LoanEditComponent } from './loan-edit/loan-edit.component';
 import { EditInstallmentListComponent } from './edit-installment-list/edit-installment-list.component';
 import { AbsentEmployeeComponent } from './absent-employee/absent-employee.component';
+import { DeductionComponent } from './deduction/deduction.component';
+import { AllowanceComponent } from './allowance/allowance.component';
 
 
 @NgModule({
@@ -95,6 +97,8 @@ import { AbsentEmployeeComponent } from './absent-employee/absent-employee.compo
     LoanEditComponent,
     EditInstallmentListComponent,
     AbsentEmployeeComponent,
+    DeductionComponent,
+    AllowanceComponent,
 
   ],
   imports: [

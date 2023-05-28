@@ -53,6 +53,8 @@ export class HrComponent implements OnInit {
     })
   }
 
+  
+
   submit() {
     console.log(this.form2.value);
     this.services.addTask(this.form2.value).subscribe((res:any) => {

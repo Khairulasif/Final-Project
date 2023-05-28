@@ -1,16 +1,14 @@
 
 
-
-
-.content-header{
+.card-header {
     padding-top: 70px;
   }
-  
-  
   .card-body{
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 10px 20px;
+    max-width: 50%;
+    margin-left: 20%;
+    padding: 20px 50px;
+    padding-right: 50px;
+   
     background: #ffffff;
     border-radius: 8px;
     color: black;

@@ -39,6 +39,8 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
 import { LoanEditComponent } from './loan-edit/loan-edit.component';
 import { EditInstallmentListComponent } from './edit-installment-list/edit-installment-list.component';
 import { AbsentEmployeeComponent } from './absent-employee/absent-employee.component';
+import { DeductionComponent } from './deduction/deduction.component';
+import { AllowanceComponent } from './allowance/allowance.component';
 
 // import { LoginComponent } from './login/login.component';
 
@@ -84,8 +86,9 @@ const routes: Routes = [
   {path: 'bankAccInformation', component: BankAccountComponent },
   {path: 'loanEdit/:postIds/edit', component: LoanEditComponent },
   {path: 'loanInstallment/:postIds/edit', component: EditInstallmentListComponent },
-  {path: 'absentEmp', component: AbsentEmployeeComponent,
-},
+  {path: 'absentEmp', component: AbsentEmployeeComponent},
+  {path: 'deduction', component: DeductionComponent},
+  {path: 'allowance', component: AllowanceComponent},
 
   {path: "**" , component: DashboardComponent}
 
