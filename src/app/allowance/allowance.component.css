@@ -1,16 +1,15 @@
 
 
 .card-header {
-    padding-top: 70px;
-  }
-  .card-body{
-    max-width: 50%;
-    margin-left: 20%;
-    padding: 20px 50px;
-    padding-right: 50px;
-   
-    background: #ffffff;
-    border-radius: 8px;
-    color: black;
-  }
-  
+  padding-top: 70px;
+}
+.card-body{
+  max-width: 80%;
+  margin-left: 10%;
+  padding: 20px 50px;
+  /* padding-right: 20px; */
+ 
+  background: #ffffff;
+  border-radius: 8px;
+  color: black;
+}

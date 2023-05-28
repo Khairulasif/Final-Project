@@ -1,5 +1,8 @@
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { modelDepartment } from './modelDepartment';
+import { Observable } from 'rxjs';
+import { modelType } from './model';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -8,12 +11,12 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AllowanceServiceService {
+export class GenPayrollServiceService {
 
-  // private url = 'http://localhost:8080/api';
+ private url = 'http://localhost:8080/api';
 
 
-  // constructor(private httpService: HttpClient) {}
+  constructor(private httpService: HttpClient) {}
 
   // getTask() : Observable<modelType[]> {
   //   const task = this.httpService.get<modelType[]>(this.url + '/departmentget');
@@ -37,4 +40,17 @@ export class AllowanceServiceService {
   // find(id:number) : Observable<any>{
   //   return this.httpService.get(this.url + '/departmentget/' + id)
   // }
+
+  getDepartment() : Observable<modelDepartment[]> {
+    const task = this.httpService.get<modelDepartment[]>(this.url + '/departmentget');
+    return task;
+  }
+
+  getEmpByDepart(department:String) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDepartment/' + department)
+  }
+
+  getEmpByMonth(selectedMonth: any) {
+    return this.httpService.get<modelType[]>(this.url + '/getByDate/' + selectedMonth)
+  }
 }

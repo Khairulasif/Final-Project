@@ -40,7 +40,7 @@
       </div> -->
   
   
-    </div>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;
   
     <div class="row">
       <div class="col-12">
@@ -51,27 +51,45 @@
             <div class="card-tools">
               <div class="input-group input-group-sm" style="width: 150px;">
                 <input type="text" name="table_search" class="form-control
-                  float-right" placeholder="Search">
+                  float-right" placeholder="Search"  [(ngModel)]="searchhr">
   
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-default">
                     <i class="fas fa-search"></i>
                   </button>
+
+                  
                 </div>
               </div>
             </div>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            
+              
+            <select name="department" id="department" [(ngModel)]="selectedDepartment">
+            
+              <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
+              
+  
+            </select>&nbsp;&nbsp;
+            
+              <button  type="submit" class="btn-btn btn-primary" (click)="onDepSubmit()">Set Department</button>
           </div>
           <!-- /.card-header -->
           <div class="card-body table-responsive p-0">
+            
+            
             <table class="table table-hover text-nowrap">
               <thead>
                 <tr>
                   <th>Employee ID</th>
                   <th>Employee Name</th>
                   <th>Department</th>
+                  <th>Designation</th>
   
                   <th>Month</th>
-                  <th>Salary</th>
+                  <th>Paid Salary</th>
                   
                   <th>Pay Date</th>
                   <th>Status</th>
@@ -84,70 +102,19 @@
                 </tr>
               </thead>
               <tbody>
+                <!-- | filter:searchhr -->
                 <tr>
-                  <td>123</td>
-  
-                  <td>Asif</td>
-                  <td>November</td>
-                  <td>$1000</td>
-                  <td>0</td>
-                  <td>184</td>
-                  <td>0</td>
-                  <td>12/04/23</td>
-                  <td>Paid</td>
-  
+                  <!-- <td>{{v.departmentId}}</td>
+                  <td>{{v.name}}</td> -->
+                 
+                  
   
                  <td><a href="" routerLink="/paySlip"><i class="fas fa-print"></i></a></td>
   
                 </tr>
-                <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>November</td>
-                    <td>$1000</td>
-                    <td>0</td>
-                    <td>184</td>
-                    <td>0</td>
-                    <td>12/04/23</td>
-                    <td>Paid</td>
-    
-    
-                   <td><a href=""><i class="fas fa-print"></i></a></td>
-    
-                  </tr>
-                  <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>November</td>
-                    <td>$1000</td>
-                    <td>0</td>
-                    <td>184</td>
-                    <td>0</td>
-                    <td>12/04/23</td>
-                    <td>Paid</td>
-    
-    
-                   <td><a href=""><i class="fas fa-print"></i></a></td>
-    
-                  </tr>
-                  <tr>
-                    <td>123</td>
-    
-                    <td>Asif</td>
-                    <td>November</td>
-                    <td>$1000</td>
-                    <td>0</td>
-                    <td>184</td>
-                    <td>0</td>
-                    <td>12/04/23</td>
-                    <td>Paid</td>
-    
-    
-                   <td><a href=""><i class="fas fa-print"></i></a></td>
-    
-                  </tr>
+               
+                 
+                 
               </tbody>
             </table>
           </div>

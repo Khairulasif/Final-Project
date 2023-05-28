@@ -8,9 +8,9 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AllowanceServiceService {
+export class GenSalaryServiceService {
 
-  // private url = 'http://localhost:8080/api';
+   // private url = 'http://localhost:8080/api';
 
 
   // constructor(private httpService: HttpClient) {}
