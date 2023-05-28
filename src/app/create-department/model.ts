@@ -1,5 +1,5 @@
 export interface modelType{
-    id:number;
+    departmentId:number;
     name:string;
     
   }

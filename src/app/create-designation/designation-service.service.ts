@@ -29,7 +29,7 @@ export class DesignationServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/designationedit/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/designationedit/' + task.designationId, task, httpOptions)
   }
 
   deleteTask(id:number) {

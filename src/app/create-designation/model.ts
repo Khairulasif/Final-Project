@@ -1,5 +1,5 @@
 export interface modelType{
-    id:number;
+    designationId:number;
     name:string;
     
   }

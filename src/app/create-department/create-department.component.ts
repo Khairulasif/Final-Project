@@ -23,7 +23,7 @@ export class CreateDepartmentComponent implements OnInit{
     this.services.getTask().subscribe((newPost: modelType[]) => {this.list = newPost})
 
     this.form2 = new FormGroup({
-      id: new FormControl(),
+      departmentId: new FormControl(),
       name: new FormControl(''),
       
     })
@@ -36,7 +36,7 @@ export class CreateDepartmentComponent implements OnInit{
   submit() {
     console.log(this.form2.value)
 
-      if(this.form2.value.id === null) {
+      if(this.form2.value.departmentId === null) {
         this.services.addTask(this.form2.value).subscribe(res => {
 
 this.ngOnInit();
@@ -55,7 +55,7 @@ this.ngOnInit();
   edit(task:modelType) {
     this.editData=true;
     this.form2 = new FormGroup({
-      id: new FormControl(task.id),
+      departmentId: new FormControl(task.departmentId),
       name: new FormControl(task.name),
       
     })

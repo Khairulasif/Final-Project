@@ -34,7 +34,7 @@
                 <br>
                 <button *ngIf="editData===false" type="submit" class="btn-primary">Submit</button>
                 <button *ngIf="editData===true" type="submit" class="btn-update">Update</button>&nbsp;&nbsp;&nbsp;
-                <button type="submit" class="btn btn-danger">Cancel</button>
+                <button type="button" class="btn btn-danger" (click)="ngOnInit()">Cancel</button>
               </form>
             </div>
 
@@ -76,10 +76,10 @@
                     </thead>
                     <tbody>
                       <tr *ngFor="let v of list">
-                        <td>{{v.id}}</td>
+                        <td>{{v.designationId}}</td>
                         <td>{{v.name}}</td>
                         <td><button type="button" (click)="edit(v)" class="btn-update">Update</button>&nbsp;&nbsp;
-                        <button type="button" (click)="delete(v.id)" class="btn-danger">Delete</button></td>
+                        <button type="button" (click)="delete(v.designationId)" class="btn-danger">Delete</button></td>
         
                       </tr>
                       

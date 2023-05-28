@@ -32,7 +32,7 @@ export class DepartmentServiceService {
 
   updateTask(task:modelType) {
 
-    return this.httpService.put<modelType>(this.url + '/departmentedit/' + task.id, task, httpOptions)
+    return this.httpService.put<modelType>(this.url + '/departmentedit/' + task.departmentId, task, httpOptions)
   }
 
   deleteTask(id:number) {

@@ -22,7 +22,7 @@ export class CreateDesignationComponent {
     this.services.getTask().subscribe((newPost: modelType[]) => {this.list = newPost})
 
     this.form2 = new FormGroup({
-      id: new FormControl(),
+      designationId: new FormControl(),
       name: new FormControl(''),
       
     })
@@ -35,7 +35,7 @@ export class CreateDesignationComponent {
   submit() {
     console.log(this.form2.value)
 
-      if(this.form2.value.id === null) {
+      if(this.form2.value.designationId === null) {
         this.services.addTask(this.form2.value).subscribe(res => {
 
 this.ngOnInit();
@@ -54,7 +54,7 @@ this.ngOnInit();
   edit(task:modelType) {
     this.editData=true;
     this.form2 = new FormGroup({
-      id: new FormControl(task.id),
+      designationId: new FormControl(task.designationId),
       name: new FormControl(task.name),
       
     })
