@@ -15,7 +15,7 @@ export class AttenReportComponent implements OnInit{
  
   empGet!: modelGetEmp;
 
-  submittedEmpid: number = 134 ;
+  submittedEmpid: number = 112 ;
 
   statusGet !: any;
 
@@ -45,7 +45,7 @@ export class AttenReportComponent implements OnInit{
         date: new FormControl(currentDate),
         signIn: new FormControl(),
         signOut: new FormControl(),
-        workingHour: new FormControl(),
+        
         department: new FormControl(this.empGet.department),
         designation: new FormControl(this.empGet.designation),
 

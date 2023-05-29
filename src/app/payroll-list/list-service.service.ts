@@ -18,10 +18,10 @@ export class ListServiceService {
 
   constructor(private httpService: HttpClient) {}
 
-  // getTask() : Observable<modelType[]> {
-  //   const task = this.httpService.get<modelType[]>(this.url + '/departmentget');
-  //   return task;
-  // }
+  getTask() : Observable<modelType[]> {
+    const task = this.httpService.get<modelType[]>(this.url + '/getEmpPaid');
+    return task;
+  }
 
   // addTask(task:modelType) {
   //   return this.httpService.post<modelType>(this.url + '/departmentpost' , task, httpOptions);

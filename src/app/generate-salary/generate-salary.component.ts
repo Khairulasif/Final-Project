@@ -25,8 +25,10 @@ export class GenerateSalaryComponent implements OnInit{
 
   deductInf!: modelDeduct;
 
-  // finalsal: number = 0;
+  
 
+  totalAllowance: number = 0;
+  totalDeduct: number = 0;
 
   constructor(private services: GenSalaryServiceService,
     private route: ActivatedRoute,
@@ -60,10 +62,10 @@ export class GenerateSalaryComponent implements OnInit{
         bonus: new FormControl(),
         
        
-        allowance: new FormControl(this.allowanceInf.total),
-        deduction: new FormControl(this.deductInf.total),
+        allowance: new FormControl(this.totalAllowance),
+        deduction: new FormControl(this.totalDeduct),
         payDate: new FormControl(),
-        finalSalary: new FormControl(),
+        finalSalary: new FormControl(this.calculateSalary),
         status: new FormControl(),
         paidType: new FormControl(),
        
@@ -72,34 +74,45 @@ export class GenerateSalaryComponent implements OnInit{
        
       })
       
-      // this.calculate();
+      
       
    
     });
     
   }
 
-  // calculate() {
-  //   this.finalsal = (this.form2.value.basicSalary + this.form2.value.allowance + this.form2.value.bonus) - this.form2.value.deduction ;
-  
-   
-    
-  // }
+ 
 
   onSubmit() {
 
     this.services.findAllowanceInf(this.id, this.selectedMonth).subscribe((task: modelAllowance) => {
       this.allowanceInf = task;
-      console.log(this.allowanceInf);
+      this.totalAllowance = this.allowanceInf.total;
+      
+      
 
     });
 
     this.services.findDeductInf(this.id, this.selectedMonth).subscribe((task: modelDeduct) => {
       this.deductInf = task;
-      console.log(this.deductInf);
+      this.totalDeduct = this.deductInf.total;
 
     });
 
+    this.calculate();
+   
+    
+
+  }
+
+  calculateSalary: number = 0;
+
+  calculate() {
+    this.calculateSalary = (this.empInf.basicSalary + this.totalAllowance) - this.totalDeduct ;
+    console.log(this.calculateSalary);
+    
+   
+    
   }
 
   submit() {

@@ -19,9 +19,14 @@ export class PayrollListComponent implements OnInit {
 
   searchhr:any;
 
+  postList!: modelType[];
+
   constructor(private services: ListServiceService) { }
 
   ngOnInit(): void {
+
+    this.services.getTask().subscribe((newPost: modelType[]) => {
+      this.postList = newPost; console.log(this.postList) })
 
     this.services.getDepartment().subscribe((newPost: modelDepartment[]) => {
       this.departmentList = newPost;

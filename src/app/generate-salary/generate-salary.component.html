@@ -69,7 +69,7 @@
 
                     <div class="form-group">
                         <label>Final Salary</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="finalSalary">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="finalSalary" [(ngModel)] = "calculateSalary">
                     </div>
                     <!-- [(ngModel)] = "finalsal" -->
                     <br>
@@ -92,12 +92,12 @@
 
                     <div class="form-group">
                         <label for="salary">Allowance</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="allowance">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="allowance" [(ngModel)]="totalAllowance">
                     </div>
 
                     <div class="form-group">
                         <label for="salary">Deduction</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="deduction">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="deduction" [(ngModel)]="totalDeduct">
                     </div>
 
                     

@@ -85,8 +85,7 @@
                 <tr>
                   <th>Employee ID</th>
                   <th>Employee Name</th>
-                  <th>Department</th>
-                  <th>Designation</th>
+                 
   
                   <th>Month</th>
                   <th>Paid Salary</th>
@@ -103,9 +102,13 @@
               </thead>
               <tbody>
                 <!-- | filter:searchhr -->
-                <tr>
-                  <!-- <td>{{v.departmentId}}</td>
-                  <td>{{v.name}}</td> -->
+                <tr *ngFor="let v of postList | filter:searchhr">
+                  <td>{{v.employeeId}}</td>
+                  <td>{{v.employeeName}}</td>
+                  <td>{{v.month}}</td>
+                  <td>{{v.finalSalary}}</td>
+                  <td>{{v.payDate}}</td>
+                  <td>{{v.status}}</td>
                  
                   
   

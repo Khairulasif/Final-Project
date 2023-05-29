@@ -7,6 +7,7 @@ export interface modelType{
     bonus: number;
     allowance: number;
     deduction: number;
+    payDate: Date;
     finalSalary: number;
     status: String;
     

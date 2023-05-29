@@ -9,7 +9,7 @@ export interface absentSave{
     date:Date;
     signIn:Time;
     signOut:Time;
-    workingHour:Time;
+   
     
     department:string;
     designation:string;
