@@ -82,7 +82,7 @@ export class AllowanceComponent implements OnInit{
 
 
 addTotal() {
-  this.addSalary = this.form2.value.basicSalary + this.form2.value.hra + this.form2.value.hra + this.form2.value.ta + this.form2.value.da + this.form2.value.medicalAllowance + this.form2.value.mobileAllowance;
+  this.addSalary = this.form2.value.hra + this.form2.value.hra + this.form2.value.ta + this.form2.value.da + this.form2.value.medicalAllowance + this.form2.value.mobileAllowance;
  console.log(this.addSalary);
  
   

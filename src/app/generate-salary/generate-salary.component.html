@@ -6,6 +6,8 @@
 
         </div>
         <!-- /.card-header -->
+
+        <form class="container" [formGroup]="form2" (ngSubmit)="submit()">
         <div class="card-body">
 
 
@@ -13,21 +15,39 @@
             <div class="row">
                 <div class="col-md-12">
 
+                    <input type="number" class="form-control-plaintext" style="background-color: darkgray;"
+                    formControlName="id" hidden>
+
+                    <div class="form-group">
+                        <label for="name">Employee ID</label>
+                        <input type="number" class="form-control-plaintext"  style="background-color: darkgray;" formControlName="employeeId">
+                    </div>
+
 
                     <div class="form-group">
                         <label for="name">Employee</label>
-                        <input type="text" class="form-control-plaintext" disabled style="background-color: darkgray;">
+                        <input type="text" class="form-control-plaintext"  style="background-color: darkgray;" formControlName="employeeName">
                     </div>
 
                     <div class="form-group">
                         <label>Month</label>
-                        <input type="month" class="form-control-plaintext" disabled style="background-color: darkgray;">
+                        <input type="month" class="form-control-plaintext"  style="background-color: darkgray;" formControlName="month" [(ngModel)] = "selectedMonth">
                     </div>
+                    <br>
+                    
+                    
+                    <div class="flex-parent jc-center">
+                        <button type="button" class="btn btn-primary" (click) = "onSubmit()">Set</button>&nbsp;
+    
+                    </div>
+               
+
+                    <br>
 
 
                 </div>
 
-
+                
 
 
                 <div class="col-md-6">
@@ -35,24 +55,23 @@
 
                     <div class="form-group">
                         <label for="salary">basic Salary</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="basicSalary">
                     </div>
 
-                    <div class="form-group">
-                        <label>Working Hours</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
-                    </div>
+                    
 
-                    <div class="form-group">
-                        <label>Hours Worked</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
-                    </div>
+                
 
                     <div class="form-group">
                         <label>Pay Date</label>
-                        <input type="date" class="form-control-plaintext" style="background-color: darkgray;">
+                        <input type="date" class="form-control-plaintext" style="background-color: darkgray;" formControlName="payDate">
                     </div>
 
+                    <div class="form-group">
+                        <label>Final Salary</label>
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="finalSalary">
+                    </div>
+                    <!-- [(ngModel)] = "finalsal" -->
                     <br>
                     <br>
 
@@ -68,28 +87,22 @@
 
                     <div class="form-group">
                         <label for="salary">Bonus</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="bonus">
                     </div>
 
                     <div class="form-group">
                         <label for="salary">Allowance</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="allowance">
                     </div>
 
                     <div class="form-group">
                         <label for="salary">Deduction</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
+                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;" formControlName="deduction">
                     </div>
 
-                    <div class="form-group">
-                        <label>Loan</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
-                    </div>
+                    
 
-                    <div class="form-group">
-                        <label>Final Salary</label>
-                        <input type="number" class="form-control-plaintext" style="background-color: darkgray;">
-                    </div>
+                   
 
                    
 
@@ -120,13 +133,13 @@
                 
                     
                         <label>Hand Cash</label>&nbsp;
-                        <input type="radio" id="status" name="status" value="Paid" formControlName="status">
+                        <input type="radio" id="type" name="type" value="Cash" formControlName="paidType">
                     
                         &nbsp;&nbsp;
 
                     
                         <label>Bank</label>&nbsp;
-                        <input type="radio" id="status" name="status" value="Paid" formControlName="status">
+                        <input type="radio" id="type" name="type" value="Bank" formControlName="paidType">
                    
                 </div>
 
@@ -138,11 +151,12 @@
 
             <div class="card-footer" style="align-self: center;">
                 <div class="flex-parent jc-center">
-                    <button type="submit" class="btn btn-primary" routerLink="/payrollList">Submit</button>&nbsp;
+                    <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
 
                 </div>
             </div>
         </div>
+        </form>
 
 
 

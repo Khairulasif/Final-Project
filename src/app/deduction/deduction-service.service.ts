@@ -1,5 +1,7 @@
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { modelType } from './model';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -10,19 +12,19 @@ const httpOptions = {
 })
 export class DeductionServiceService {
 
-  // private url = 'http://localhost:8080/api';
+  private url = 'http://localhost:8080/api';
 
 
-  // constructor(private httpService: HttpClient) {}
+  constructor(private httpService: HttpClient) {}
 
   // getTask() : Observable<modelType[]> {
   //   const task = this.httpService.get<modelType[]>(this.url + '/departmentget');
   //   return task;
   // }
 
-  // addTask(task:modelType) {
-  //   return this.httpService.post<modelType>(this.url + '/departmentpost' , task, httpOptions);
-  // }
+  addTask(task:modelType) {
+    return this.httpService.post<modelType>(this.url + '/deductionPost' , task, httpOptions);
+  }
 
   // updateTask(task:modelType) {
 
@@ -34,7 +36,7 @@ export class DeductionServiceService {
   //   return this.httpService.delete(this.url + '/departmendelete/'+ id)
   // }
 
-  // find(id:number) : Observable<any>{
-  //   return this.httpService.get(this.url + '/departmentget/' + id)
-  // }
+  find(id:number) : Observable<any>{
+    return this.httpService.get(this.url + '/empGetByIdForSalary/' + id)
+  }
 }
