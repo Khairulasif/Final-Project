@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { modelEmpInf } from './modelEmpInformation';
+import { modelType } from './model';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -22,9 +23,9 @@ export class AllowanceServiceService {
   //   return task;
   // }
 
-  // addTask(task:modelType) {
-  //   return this.httpService.post<modelType>(this.url + '/departmentpost' , task, httpOptions);
-  // }
+  addTask(task:modelType) {
+    return this.httpService.post<modelType>(this.url + '/allowancePost' , task, httpOptions);
+  }
 
   // updateTask(task:modelType) {
 
@@ -37,6 +38,6 @@ export class AllowanceServiceService {
   // }
 
   find(id:number) : Observable<any>{
-    return this.httpService.get(this.url + '/departmentget/' + id)
+    return this.httpService.get(this.url + '/empGetByIdForSalary/' + id)
   }
 }

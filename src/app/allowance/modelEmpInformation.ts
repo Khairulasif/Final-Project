@@ -1,6 +1,6 @@
 
 export interface modelEmpInf{
-    employeeId: String;
+    employeeId: number;
     fname: String;
     department: String;
     designation: String;
