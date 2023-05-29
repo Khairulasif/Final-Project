@@ -18,10 +18,10 @@ export class GenPayrollServiceService {
 
   constructor(private httpService: HttpClient) {}
 
-  // getTask() : Observable<modelType[]> {
-  //   const task = this.httpService.get<modelType[]>(this.url + '/departmentget');
-  //   return task;
-  // }
+  getTask() : Observable<modelType[]> {
+    const task = this.httpService.get<modelType[]>(this.url + '/empgetForSalary');
+    return task;
+  }
 
   // addTask(task:modelType) {
   //   return this.httpService.post<modelType>(this.url + '/departmentpost' , task, httpOptions);
@@ -47,10 +47,10 @@ export class GenPayrollServiceService {
   }
 
   getEmpByDepart(department:String) {
-    return this.httpService.get<modelType[]>(this.url + '/getByDepartment/' + department)
+    return this.httpService.get<modelType[]>(this.url + '/getByDepartmentForSalary/' + department)
   }
 
-  getEmpByMonth(selectedMonth: any) {
-    return this.httpService.get<modelType[]>(this.url + '/getByDate/' + selectedMonth)
-  }
+  // getEmpByMonth(selectedMonth: any) {
+  //   return this.httpService.get<modelType[]>(this.url + '/getByDate/' + selectedMonth)
+  // }
 }

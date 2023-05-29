@@ -26,6 +26,9 @@ export class GeneratePayrollComponent implements OnInit{
       this.departmentList = newPost;
       })
 
+      this.services.getTask().subscribe((newPost: modelType[]) => {
+        this.getEmpList = newPost; console.log(this.getEmpList) })
+
 }
 
 onDepSubmit(): void {
@@ -36,12 +39,12 @@ onDepSubmit(): void {
     this.getEmpList = newPost; console.log(this.getEmpList) })
 }
 
-onSubmitMonth(): void {
+// onSubmitMonth(): void {
     
-  console.log(this.selectedMonth);
+//   console.log(this.selectedMonth);
 
-  this.services.getEmpByMonth(this.selectedMonth).subscribe((newPost: modelType[]) => {
-    this.getEmpList = newPost; console.log(this.getEmpList) })
-}
+//   this.services.getEmpByMonth(this.selectedMonth).subscribe((newPost: modelType[]) => {
+//     this.getEmpList = newPost; console.log(this.getEmpList) })
+// }
 
 }

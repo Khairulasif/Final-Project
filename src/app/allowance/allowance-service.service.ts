@@ -1,5 +1,7 @@
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { modelEmpInf } from './modelEmpInformation';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -10,10 +12,10 @@ const httpOptions = {
 })
 export class AllowanceServiceService {
 
-  // private url = 'http://localhost:8080/api';
+  private url = 'http://localhost:8080/api';
 
 
-  // constructor(private httpService: HttpClient) {}
+  constructor(private httpService: HttpClient) {}
 
   // getTask() : Observable<modelType[]> {
   //   const task = this.httpService.get<modelType[]>(this.url + '/departmentget');
@@ -34,7 +36,7 @@ export class AllowanceServiceService {
   //   return this.httpService.delete(this.url + '/departmendelete/'+ id)
   // }
 
-  // find(id:number) : Observable<any>{
-  //   return this.httpService.get(this.url + '/departmentget/' + id)
-  // }
+  find(id:number) : Observable<any>{
+    return this.httpService.get(this.url + '/departmentget/' + id)
+  }
 }

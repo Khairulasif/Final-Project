@@ -69,7 +69,7 @@ const routes: Routes = [
   {path: 'leaveAppli', component: LeaveApplComponent },
   {path: 'payrollList', component: PayrollListComponent },
   {path: 'generatePayroll', component: GeneratePayrollComponent },
-  {path: 'generateSalary', component: GenerateSalaryComponent },
+  {path: 'generateSalary/:postIds', component: GenerateSalaryComponent },
   {path: 'paySlip', component: PaySlipComponent },
   {path: 'loanList', component: LoanListComponent },
   {path: 'addLoan', component: AddLoanComponent },
@@ -87,8 +87,8 @@ const routes: Routes = [
   {path: 'loanEdit/:postIds/edit', component: LoanEditComponent },
   {path: 'loanInstallment/:postIds/edit', component: EditInstallmentListComponent },
   {path: 'absentEmp', component: AbsentEmployeeComponent},
-  {path: 'deduction', component: DeductionComponent},
-  {path: 'allowance', component: AllowanceComponent},
+  {path: 'deduction/:postIds', component: DeductionComponent},
+  {path: 'allowance/:postIds', component: AllowanceComponent},
 
   {path: "**" , component: DashboardComponent}
 

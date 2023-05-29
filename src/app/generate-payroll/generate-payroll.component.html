@@ -32,25 +32,15 @@
         
                   </select>&nbsp;&nbsp;
                   
-                    <button  type="submit" class="btn-btn btn-primary" (click)="onDepSubmit()">Set</button>
+                   
                 
               </div>
   
             
-              <!-- <select name="department" id="department" [(ngModel)]="selectedDepartment">
-            
-                <option value="Administration" *ngFor="let v of departmentList" [value]="v.name">{{v.name}}</option>
-                
-    
-              </select>&nbsp;&nbsp;
-              
-                <button  type="submit" class="btn-btn btn-primary" (click)="onDepSubmit()">Set Department</button> -->
+             
             
   
-            <div class="form-group">
-              <label>Month</label>
-              <input type="month" class="form-control-plaintext" style="background-color: darkgray;">
-            </div>
+            
   
   
           </div>
@@ -64,7 +54,7 @@
   
         <div class="card-footer" style="align-self: center;">
           <div class="flex-parent jc-center">
-            <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+             <button  type="submit" class="btn btn-primary" (click)="onDepSubmit()">Set</button>
   
           </div>
         </div>
@@ -108,13 +98,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>183</td>
-                    <td>Asif</td>
-                    <td>$6500</td>
-                  <td><a href="" routerLink="/generateSalary"><span class="badge badge-success">Generate Salary</span></a></td>
-                      <td><a href="" routerLink="/allowance"><span class="badge badge-success">Allowance</span></a></td>
-                      <td><a href="" routerLink="/deduction"><span class="badge badge-danger">Deduction</span></a></td>
+                  <tr *ngFor="let v of getEmpList">
+                    <td>{{v.employeeId}}</td>
+                    <td>{{v.fname}}</td>
+                    <td>{{v.department}}</td>
+                    <td>{{v.designation}}</td>
+                    <td>{{v.basicSalary}}</td>
+                    
+                  <td><a href="" [routerLink]="['/generateSalary/', v.employeeId]"><span class="badge badge-success">Generate Salary</span></a>&nbsp;
+                      <a href="" [routerLink]="['/allowance/', v.employeeId]"><span class="badge badge-success">Allowance</span></a>&nbsp;
+                      <a href="" [routerLink]="['/deduction/', v.employeeId]"><span class="badge badge-danger">Deduction</span></a>&nbsp;
+                  </td>
                   
                     
                     
